@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Remembering what ‘this’ refers to - the A, B, C, D methodThe this reference and how it can dynamically change in a runtime is one of the characteristi">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Krzysztof Zbiciński">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Remembering what &#39;this&#39; refers to - the A, B, C, D method"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Krzysztof Zbiciński - Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Remembering what &#39;this&#39; refers to - the A, B, C, D method - Krzysztof Zbiciński - Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-27343777-6', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/img/code.png">
+    
+	
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Krzysztof Zbiciński - Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/atom.xml">
+                            
+                                RSS
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Remembering what 'this' refers to - the A, B, C, D method</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                            Posted by Krzysztof Zbiciński on
+                        
+                        
+                            2016-09-04
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Remembering-what-‘this’-refers-to-the-A-B-C-D-method"><a href="#Remembering-what-‘this’-refers-to-the-A-B-C-D-method" class="headerlink" title="Remembering what ‘this’ refers to - the A, B, C, D method"></a>Remembering what ‘this’ refers to - the A, B, C, D method</h1><p>The <code>this</code> reference and how it can dynamically change in a runtime is one of the characteristic features of JavaScript. As far as I know, there is no analogy of this behavior in any other popular programming language.</p>
+<p>Because of its uniqueness, it’s no surprise that people are often confused by this mechanism and are not quite sure what <code>this</code> is going to refer to in a particular case.</p>
+<center><br><img src="/2016/09/04/Remembering-what-this-refers-to-the-A-B-C-D-method/tweet.png" alt="Just another happy JavaScript developer." title="Just another happy JavaScript developer."><br>Just another happy JavaScript developer.<br></center>
+
+<p>However, there are only four rules that compiler follows when resolving the <code>this</code> reference. For easier remembering, I put them in a sequence of A, B, C, D. The earlier the rule, the bigger importance and priority it has.</p>
+<h2 id="A-A-new-object-is-being-constructed"><a href="#A-A-new-object-is-being-constructed" class="headerlink" title="A - A new object is being constructed"></a>A - A new object is being constructed</h2><p>If the function was called with the <code>new</code> keyword, then <code>this</code> refers to an object constructed using this function.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">whatIsThis</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">new</span> whatIsThis(); <span class="comment">// logs out whatIsThis&#123;&#125;</span></div></pre></td></tr></table></figure>
+<h2 id="B-context-was-BOUND-using-bind-call-or-apply"><a href="#B-context-was-BOUND-using-bind-call-or-apply" class="headerlink" title="B - context was BOUND using bind, call or apply"></a>B - context was BOUND using bind, call or apply</h2><p>If the function was bound to a context using the <code>bind</code> method or was executed using <code>call</code> or <code>apply</code> methods, then <code>this</code> refers to an object passed as an argument to these functions.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">whatIsThis.bind(<span class="number">2</span>)(); <span class="comment">// 2</span></div><div class="line">whatIsThis.call(<span class="number">2</span>); <span class="comment">// 2</span></div><div class="line">whatIsThis.apply(<span class="number">2</span>); <span class="comment">// 2</span></div><div class="line"></div><div class="line"><span class="comment">// but:</span></div><div class="line"><span class="keyword">var</span> temp = whatIsThis.bind(<span class="number">2</span>);</div><div class="line"><span class="keyword">new</span> temp(); <span class="comment">// whatIsThis&#123;&#125; - the A rule has precedence</span></div></pre></td></tr></table></figure>
+<h2 id="C-CONTAINING-object"><a href="#C-CONTAINING-object" class="headerlink" title="C - CONTAINING object"></a>C - CONTAINING object</h2><p>If the function called was conatined within an object, then <code>this</code> refers to the containing object.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = &#123;<span class="attr">whatIsThis</span>: whatIsThis&#125;;</div><div class="line">foo.whatIsThis(); <span class="comment">// foo</span></div><div class="line"></div><div class="line"><span class="comment">// but:</span></div><div class="line">foo.whatIsThis.apply(<span class="number">2</span>); <span class="comment">// 2 - the B rule has precendence</span></div></pre></td></tr></table></figure>
+<h2 id="D-fallback-to-the-DEFAULT-behavior"><a href="#D-fallback-to-the-DEFAULT-behavior" class="headerlink" title="D - fallback to the DEFAULT behavior"></a>D - fallback to the DEFAULT behavior</h2><p>If answers to all of the rules above are negative, then <code>this</code> refers to the global object or to <code>undefined</code> if <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode" target="_blank" rel="external">strict mode</a> is enabled.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">whatIsThis(); <span class="comment">// window, process or undefined</span></div></pre></td></tr></table></figure>
+<p>And that’s pretty much it. :) You can check this behavior by yourself, using<br><a href="https://jsfiddle.net/zbicin/owa92sa5/" target="_blank" rel="external">a fiddle I’ve created</a>. It contains example code which shows how the <code>this</code> reference changes according to the mentioned rules.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+    <hr />
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                        <li>
+                            <a href="https://twitter.com/zbicin" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/zbicin" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="/atom.xml" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-feed fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2017 Krzysztof Zbiciński<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'zbicin';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+</body>
+
+</html>

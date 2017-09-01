@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Krzysztof Zbiciński - Blog</title>
+  <subtitle>How to code frontend and don&#39;t go bonkers</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://zbic.in/"/>
+  <updated>2017-09-01T20:19:20.337Z</updated>
+  <id>http://zbic.in/</id>
+  
+  <author>
+    <name>Krzysztof Zbiciński</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ngh - you want to know this command</title>
+    <link href="http://zbic.in/2017/04/16/ngh-you-want-to-know-this-command/"/>
+    <id>http://zbic.in/2017/04/16/ngh-you-want-to-know-this-command/</id>
+    <published>2017-04-16T00:00:00.000Z</published>
+    <updated>2017-09-01T20:19:20.337Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;ngh-you-want-to-know-this-command&quot;&gt;&lt;a href=&quot;#ngh-you-want-to-know-this-command&quot; class=&quot;headerlink&quot; title=&quot;ngh - you want to know thi
+    
+    </summary>
+    
+    
+      <category term="Angular" scheme="http://zbic.in/tags/Angular/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The concept of an &#39;idea bag&#39;</title>
+    <link href="http://zbic.in/2017/04/03/The-concept-of-an-idea-bag/"/>
+    <id>http://zbic.in/2017/04/03/The-concept-of-an-idea-bag/</id>
+    <published>2017-04-03T00:00:00.000Z</published>
+    <updated>2017-09-01T19:02:56.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;The-concept-of-an-‘idea-bag’&quot;&gt;&lt;a href=&quot;#The-concept-of-an-‘idea-bag’&quot; class=&quot;headerlink&quot; title=&quot;The concept of an ‘idea bag’&quot;&gt;&lt;/a&gt;Th
+    
+    </summary>
+    
+    
+      <category term="Other" scheme="http://zbic.in/tags/Other/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Music Driven Development</title>
+    <link href="http://zbic.in/2017/03/14/Music-Driven-Development/"/>
+    <id>http://zbic.in/2017/03/14/Music-Driven-Development/</id>
+    <published>2017-03-14T00:00:00.000Z</published>
+    <updated>2017-09-01T20:26:23.669Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Music-Driven-Development&quot;&gt;&lt;a href=&quot;#Music-Driven-Development&quot; class=&quot;headerlink&quot; title=&quot;Music Driven Development&quot;&gt;&lt;/a&gt;Music Driven D
+    
+    </summary>
+    
+    
+      <category term="Other" scheme="http://zbic.in/tags/Other/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NodeSchool Lodz #6</title>
+    <link href="http://zbic.in/2016/11/05/NodeSchool-Lodz-6/"/>
+    <id>http://zbic.in/2016/11/05/NodeSchool-Lodz-6/</id>
+    <published>2016-11-05T00:00:00.000Z</published>
+    <updated>2017-09-01T19:37:24.430Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;NodeSchool-Lodz-6&quot;&gt;&lt;a href=&quot;#NodeSchool-Lodz-6&quot; class=&quot;headerlink&quot; title=&quot;NodeSchool Lodz #6&quot;&gt;&lt;/a&gt;NodeSchool Lodz #6&lt;/h1&gt;&lt;p&gt;The 6th 
+    
+    </summary>
+    
+    
+      <category term="NodeSchool" scheme="http://zbic.in/tags/NodeSchool/"/>
+    
+      <category term="Node.js" scheme="http://zbic.in/tags/Node-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Remembering what &#39;this&#39; refers to - the A, B, C, D method</title>
+    <link href="http://zbic.in/2016/09/04/Remembering-what-this-refers-to-the-A-B-C-D-method/"/>
+    <id>http://zbic.in/2016/09/04/Remembering-what-this-refers-to-the-A-B-C-D-method/</id>
+    <published>2016-09-04T00:00:00.000Z</published>
+    <updated>2017-09-01T20:25:34.547Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Remembering-what-‘this’-refers-to-the-A-B-C-D-method&quot;&gt;&lt;a href=&quot;#Remembering-what-‘this’-refers-to-the-A-B-C-D-method&quot; class=&quot;headerl
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://zbic.in/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Using Angular 1.x, Webpack, TypeScript and Karma (with Coverage) together</title>
+    <link href="http://zbic.in/2016/08/06/Using-Angular-1-x-Webpack-TypeScript-and-Karma-with-Coverage-together/"/>
+    <id>http://zbic.in/2016/08/06/Using-Angular-1-x-Webpack-TypeScript-and-Karma-with-Coverage-together/</id>
+    <published>2016-08-06T00:00:00.000Z</published>
+    <updated>2017-09-01T20:27:01.131Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Using-Angular-1-x-Webpack-TypeScript-and-Karma-with-Coverage-together&quot;&gt;&lt;a href=&quot;#Using-Angular-1-x-Webpack-TypeScript-and-Karma-with
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://zbic.in/tags/JavaScript/"/>
+    
+      <category term="Angular" scheme="http://zbic.in/tags/Angular/"/>
+    
+      <category term="Webpack" scheme="http://zbic.in/tags/Webpack/"/>
+    
+      <category term="TypeScript" scheme="http://zbic.in/tags/TypeScript/"/>
+    
+      <category term="Karma" scheme="http://zbic.in/tags/Karma/"/>
+    
+      <category term="Karma Coverage" scheme="http://zbic.in/tags/Karma-Coverage/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JIRA Tempo Timesheets Notifier</title>
+    <link href="http://zbic.in/2015/12/14/JIRA-Tempo-Timesheets-Notifier/"/>
+    <id>http://zbic.in/2015/12/14/JIRA-Tempo-Timesheets-Notifier/</id>
+    <published>2015-12-14T00:00:00.000Z</published>
+    <updated>2017-09-01T19:53:50.627Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;JIRA-Tempo-Timesheets-Notifier&quot;&gt;&lt;a href=&quot;#JIRA-Tempo-Timesheets-Notifier&quot; class=&quot;headerlink&quot; title=&quot;JIRA Tempo Timesheets Notifier&quot;&gt;
+    
+    </summary>
+    
+    
+      <category term="JIRA" scheme="http://zbic.in/tags/JIRA/"/>
+    
+      <category term="UserScript" scheme="http://zbic.in/tags/UserScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go home JS, you&#39;re drunk</title>
+    <link href="http://zbic.in/2015/10/17/Go-home-JS-you-re-drunk-1/"/>
+    <id>http://zbic.in/2015/10/17/Go-home-JS-you-re-drunk-1/</id>
+    <published>2015-10-17T00:00:00.000Z</published>
+    <updated>2017-09-01T20:21:36.406Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Go-home-JS-you’re-drunk&quot;&gt;&lt;a href=&quot;#Go-home-JS-you’re-drunk&quot; class=&quot;headerlink&quot; title=&quot;Go home JS, you’re drunk&quot;&gt;&lt;/a&gt;Go home JS, you’
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://zbic.in/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Parsing URL parameters - the easy way</title>
+    <link href="http://zbic.in/2015/10/15/Parsing-URL-parameters-the-easy-way/"/>
+    <id>http://zbic.in/2015/10/15/Parsing-URL-parameters-the-easy-way/</id>
+    <published>2015-10-15T00:00:00.000Z</published>
+    <updated>2017-09-01T20:23:54.908Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Parsing-URL-parameters-the-easy-way&quot;&gt;&lt;a href=&quot;#Parsing-URL-parameters-the-easy-way&quot; class=&quot;headerlink&quot; title=&quot;Parsing URL parameters
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://zbic.in/tags/JavaScript/"/>
+    
+      <category term="Gist" scheme="http://zbic.in/tags/Gist/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Smooth and efficient web animations - do&#39;s and don&#39;ts</title>
+    <link href="http://zbic.in/2015/09/21/Smooth-and-efficient-web-animations-do-s-and-don-ts/"/>
+    <id>http://zbic.in/2015/09/21/Smooth-and-efficient-web-animations-do-s-and-don-ts/</id>
+    <published>2015-09-21T00:00:00.000Z</published>
+    <updated>2017-09-01T20:37:33.580Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Smooth-and-efficient-web-animations-do’s-and-don’ts&quot;&gt;&lt;a href=&quot;#Smooth-and-efficient-web-animations-do’s-and-don’ts&quot; class=&quot;headerlin
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://zbic.in/tags/JavaScript/"/>
+    
+      <category term="CSS" scheme="http://zbic.in/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bootstrap and AngularJS sandbox to start prototyping within seconds</title>
+    <link href="http://zbic.in/2015/08/13/Bootstrap-and-AngularJS-sandbox-to-start-prototyping-within-seconds/"/>
+    <id>http://zbic.in/2015/08/13/Bootstrap-and-AngularJS-sandbox-to-start-prototyping-within-seconds/</id>
+    <published>2015-08-13T00:00:00.000Z</published>
+    <updated>2017-09-01T20:28:30.822Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Couple of times I needed to quickly scaffold something using Bootstrap and Angular, just to test an idea and evaluate how it works when t
+    
+    </summary>
+    
+    
+      <category term="AngularJS" scheme="http://zbic.in/tags/AngularJS/"/>
+    
+      <category term="Bootstrap" scheme="http://zbic.in/tags/Bootstrap/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OOP in AngularJS within minutes - #1 Defining a class</title>
+    <link href="http://zbic.in/2015/08/01/OOP-in-AngularJS-within-minutes-1-Defining-a-class/"/>
+    <id>http://zbic.in/2015/08/01/OOP-in-AngularJS-within-minutes-1-Defining-a-class/</id>
+    <published>2015-08-01T00:00:00.000Z</published>
+    <updated>2017-09-01T20:23:11.398Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;OOP-in-AngularJS-within-minutes-1-Defining-a-class&quot;&gt;&lt;a href=&quot;#OOP-in-AngularJS-within-minutes-1-Defining-a-class&quot; class=&quot;headerlink&quot;
+    
+    </summary>
+    
+    
+      <category term="AngularJS" scheme="http://zbic.in/tags/AngularJS/"/>
+    
+      <category term="JavaScript" scheme="http://zbic.in/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Long variable names and their benefits during debugging</title>
+    <link href="http://zbic.in/2015/07/11/Long-variable-names-and-their-benefits-during-debugging/"/>
+    <id>http://zbic.in/2015/07/11/Long-variable-names-and-their-benefits-during-debugging/</id>
+    <published>2015-07-11T00:00:00.000Z</published>
+    <updated>2017-09-01T20:22:10.132Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Long-variable-names-and-their-benefits-during-debugging&quot;&gt;&lt;a href=&quot;#Long-variable-names-and-their-benefits-during-debugging&quot; class=&quot;h
+    
+    </summary>
+    
+    
+      <category term="Other" scheme="http://zbic.in/tags/Other/"/>
+    
+  </entry>
+  
+</feed>

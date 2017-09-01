@@ -1,0 +1,16 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-custom .nav li a {
+  font-weight: normal;
+}
+.intro-header .site-heading h1,
+.intro-header .page-heading h1 {
+  font-size: 40px;
+}
+.navbar-custom .navbar-brand {
+  display: none;
+}
