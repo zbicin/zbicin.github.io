@@ -6,11 +6,11 @@
     "start": "concurrently -p name -n serve,generate \"hexo serve\" \"hexo generate -w\""
   },
   "hexo": {
-    "version": "3.3.7"
+    "version": "3.3.1"
   },
   "dependencies": {
     "concurrently": "^3.5.0",
-    "hexo": "^3.2.0",
+    "hexo": "^3.3.1",
     "hexo-deployer-git": "^0.3.1",
     "hexo-generator-archive": "^0.1.4",
     "hexo-generator-category": "^0.1.3",
