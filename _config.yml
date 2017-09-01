@@ -78,7 +78,7 @@ theme: clean-blog
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:zbicin/blog.git
+  repo: git@github.com:zbicin/zbicin.github.io.git
   branch: gh-pages
 
 feed:
