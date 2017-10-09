@@ -6,8 +6,6 @@ tags:
  - Node.js
 ---
 
-# NodeSchool Lodz #6
-
 The 6th edition of NodeSchool workshops in Łódź is history now. The main topic of the meeting was 'ES6 and beyond'. During the event there were two presentations given and I can modestly tell, that they included my [presentation about the state of ES6](http://zbic.in/the-state-of-es6). In this non-technical post, I'd like to share few observations and thoughts that crossed my mind while organizing the meeting.
 
 <center>

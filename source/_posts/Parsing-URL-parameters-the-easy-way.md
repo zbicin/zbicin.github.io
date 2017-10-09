@@ -6,8 +6,6 @@ tags:
  - Gist
 ---
 
-# Parsing URL parameters - the easy way
-
 I can't believe that I couldn't find a jQuery plugin or a vanilla-JS snippet that would parse the URL parameters infallibly. All of the solutions I stumbled upon were inconvenient to use or, probably surprisingly for their authors, failed when a parameter's value contained the equal sign.
 
 It felt like a right time to save the world myself, therefore I came up with the following code:

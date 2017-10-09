@@ -10,8 +10,6 @@ tags:
  - JavaScript
 ---
 
-# Using Angular 1.x, Webpack, TypeScript and Karma (with Coverage) together
-
 Putting all of these toghether was apparently a non-trivial task, so I decided to setup a simple project for a future reference. I'm quite satisfied with the result, which looks as follows:
 
 <center>

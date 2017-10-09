@@ -4,8 +4,6 @@ date: 2015-07-11
 tags: Other
 ---
 
-# Long variable names and their benefits during debugging
-
 Generally I tended to make jokes on Java and its long class, methods and variable names. The fact that there is a question on StackOverflow asking ["When a Java method name is too long?"](http://stackoverflow.com/questions/2230871/when-is-a-java-method-name-too-long) made it even more ridiculous for me.
 
 However, after reading the [Clean Code by Robert C. Martin](http://www.amazon.com/exec/obidos/ASIN/0132350882/helion-20) my opinion on long names became more liberate. To the extent that now I promote using longer, descriptive names if their usage makes sense. They may come in handy while dubugging as well, which is the clue of this blog post.

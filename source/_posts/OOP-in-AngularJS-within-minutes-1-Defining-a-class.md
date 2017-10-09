@@ -6,8 +6,6 @@ tags:
  - JavaScript
 ---
 
-# OOP in AngularJS within minutes - #1 Defining a class
-
 When it comes to object oriented programming, JavaScript is a little bit weird in comparison with other (preferably C-like) languages. The same holds true while working with AngularJS.
 
 The topic has been already covered in the Internet multiple times. If you're looking for a comprehensive article, just google it up. This blog post is intended to be used more like a handnote or a cheatsheet, so I'll try to keep it extremally concise.

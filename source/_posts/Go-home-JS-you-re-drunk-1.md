@@ -4,8 +4,6 @@ date: 2015-10-17
 tags: JavaScript
 ---
 
-# Go home JS, you're drunk
-
 What would be the result of the following code:
 
 ```javascript

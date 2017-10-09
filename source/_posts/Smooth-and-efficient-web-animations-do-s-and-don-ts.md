@@ -6,8 +6,6 @@ tags:
  - JavaScript
 ---
 
-# Smooth and efficient web animations - do's and don'ts
-
 Back in 2012, CSS3 was a novelty and only few heard and used modern JavaScript frameworks such as heroic AngularJS. It was still a _jQuery era_ in web development which, as we know now, was soon to collapse.
 
 By that time, jQuery was used for many purposes and one of them was animating objects on webpages. It worked quite well (and still do), however with CSS3 being supported by every modern browser, we would be foulish not to use it.

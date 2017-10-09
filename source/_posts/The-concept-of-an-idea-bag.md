@@ -3,7 +3,6 @@ title: The concept of an 'idea bag'
 date: 2017-04-03
 tags: Other
 ---
-# The concept of an 'idea bag'
 
 tl;dr: take notes of random, interrupting ideas.
 

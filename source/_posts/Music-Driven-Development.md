@@ -4,8 +4,6 @@ date: 2017-03-14
 tags: Other
 ---
 
-# Music Driven Development 
-
 Back in the days, I tweeted few words about staying focused:
 
 <center>
