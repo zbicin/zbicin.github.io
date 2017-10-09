@@ -173,29 +173,12 @@
     <div class="container">
         <div class="row">
 
-            <!-- Tags and categories -->
-           
-                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
-                    
-                        
-
-
-<a href="/tags/JavaScript/">#JavaScript</a> <a href="/tags/CSS/">#CSS</a>
-
-
-                    
-                </div>
-                <div class="col-lg-4 col-md-5 post-categories">
-                    
-                </div>
-            
-
             <!-- Gallery -->
             
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="Smooth-and-efficient-web-animations-do’s-and-don’ts"><a href="#Smooth-and-efficient-web-animations-do’s-and-don’ts" class="headerlink" title="Smooth and efficient web animations - do’s and don’ts"></a>Smooth and efficient web animations - do’s and don’ts</h1><p>Back in 2012, CSS3 was a novelty and only few heard and used modern JavaScript frameworks such as heroic AngularJS. It was still a <em>jQuery era</em> in web development which, as we know now, was soon to collapse.</p>
+                <p>Back in 2012, CSS3 was a novelty and only few heard and used modern JavaScript frameworks such as heroic AngularJS. It was still a <em>jQuery era</em> in web development which, as we know now, was soon to collapse.</p>
 <p>By that time, jQuery was used for many purposes and one of them was animating objects on webpages. It worked quite well (and still do), however with CSS3 being supported by every modern browser, we would be foulish not to use it.</p>
 <p>I’ll make the point concise and simple: <em>using jQuery’s <code>.animation()</code> is a huge no-go</em>. You move the responsibility of controlling animation to your JavaScript code and prevent the browser from optimizing it. Do it only if you have no other option (or time/project budget to spare).</p>
 <p>Instead one should <em>use CSS <a href="https://css-tricks.com/almanac/properties/t/transition/" target="_blank" rel="external">transition</a> and <a href="https://css-tricks.com/almanac/properties/a/animation/" target="_blank" rel="external">animation</a> properties</em>. Besides being more appropriate for this task from the logical point of view (we’re modifying the way how things look) it allows the browser to optimize it on its own and delegate part of processing to the GPU.</p>
@@ -216,6 +199,29 @@
 <p>The thing is, avoiding unnecessary paint events can make a difference while using mobile devices such as smartphones, which have limited processing capabilities. A computer with a little over 1MHz was enough <a href="https://en.wikipedia.org/wiki/Apollo_Guidance_Computer#Timing" target="_blank" rel="external">to get Apollo 11 to the moon</a>. I don’t want to see my mobile stumble over a dropdown menu.</p>
 
 
+                <!-- Tags and categories -->
+                
+                    <p class="post-tags">
+                        
+                            Tags: 
+
+
+<a href="/tags/JavaScript/">#JavaScript</a> <a href="/tags/CSS/">#CSS</a>
+
+
+                        
+                    </p>
+                    <p class="post-categories">
+                        
+                    </p>
+                
+
+                
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59db9b8d10126f1d"></script>
+
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    <div class="addthis_sharing_toolbox"></div>
                 
             </div>
 

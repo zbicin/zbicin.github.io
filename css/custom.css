@@ -14,3 +14,15 @@ h6,
 .navbar-custom .navbar-brand {
   display: none;
 }
+article .container .row img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+figure.highlight + img {
+  margin-top: 30px;
+}
+.post-tags a,
+.post-categories a {
+  text-decoration: none;
+}

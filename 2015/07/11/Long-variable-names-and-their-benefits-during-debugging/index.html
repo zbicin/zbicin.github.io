@@ -173,29 +173,12 @@
     <div class="container">
         <div class="row">
 
-            <!-- Tags and categories -->
-           
-                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
-                    
-                        
-
-
-<a href="/tags/Other/">#Other</a>
-
-
-                    
-                </div>
-                <div class="col-lg-4 col-md-5 post-categories">
-                    
-                </div>
-            
-
             <!-- Gallery -->
             
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="Long-variable-names-and-their-benefits-during-debugging"><a href="#Long-variable-names-and-their-benefits-during-debugging" class="headerlink" title="Long variable names and their benefits during debugging"></a>Long variable names and their benefits during debugging</h1><p>Generally I tended to make jokes on Java and its long class, methods and variable names. The fact that there is a question on StackOverflow asking <a href="http://stackoverflow.com/questions/2230871/when-is-a-java-method-name-too-long" target="_blank" rel="external">“When a Java method name is too long?”</a> made it even more ridiculous for me.</p>
+                <p>Generally I tended to make jokes on Java and its long class, methods and variable names. The fact that there is a question on StackOverflow asking <a href="http://stackoverflow.com/questions/2230871/when-is-a-java-method-name-too-long" target="_blank" rel="external">“When a Java method name is too long?”</a> made it even more ridiculous for me.</p>
 <p>However, after reading the <a href="http://www.amazon.com/exec/obidos/ASIN/0132350882/helion-20" target="_blank" rel="external">Clean Code by Robert C. Martin</a> my opinion on long names became more liberate. To the extent that now I promote using longer, descriptive names if their usage makes sense. They may come in handy while dubugging as well, which is the clue of this blog post.</p>
 <p>Recently I’ve faced debugging a small piece of code that I found on SO:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'[popover], [popover-html-unsafe]'</span>).each(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> t = $(<span class="keyword">this</span>);</div><div class="line"></div><div class="line">    <span class="keyword">if</span>(!(t.is(e.target) || t.has(e.target).length &gt; <span class="number">0</span>)</div><div class="line">        &amp;&amp; t.siblings(<span class="string">'.popover'</span>).length !== <span class="number">0</span></div><div class="line">        &amp;&amp; t.siblings(<span class="string">'.popover'</span>).has(e.target).length === <span class="number">0</span>) &#123;</div><div class="line">        t.trigger(<span class="string">'click'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
@@ -208,6 +191,29 @@
 <p>Each time I proceeded to the next considered element, it saved me few seconds wasted on struggling with this unintuitive jQuery methods calls and prevented my brain from exploding.</p>
 
 
+                <!-- Tags and categories -->
+                
+                    <p class="post-tags">
+                        
+                            Tags: 
+
+
+<a href="/tags/Other/">#Other</a>
+
+
+                        
+                    </p>
+                    <p class="post-categories">
+                        
+                    </p>
+                
+
+                
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59db9b8d10126f1d"></script>
+
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    <div class="addthis_sharing_toolbox"></div>
                 
             </div>
 
