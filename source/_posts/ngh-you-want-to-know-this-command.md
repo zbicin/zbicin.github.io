@@ -2,6 +2,7 @@
 title: ngh - you want to know this command
 date: 2017-04-16
 tags: Angular
+cover: cover.jpg
 ---
 
 Back in the days there was a command in the [Angular CLI](https://cli.angular.io/) named `ng ghpages`. It was intended to provide a trival way of publishing the application generated with `ng`. It was building the project, grabbing the contents of the `dist` directory and pushing them to the `gh-pages` branch of the repository. Then, the application was available online at `<USERNAME>.github.io/<REPOSITORY NAME>`.
@@ -24,3 +25,5 @@ What I would consider a good practice is creating an npm script that calls `ngh`
   //...
 }
 ```
+
+_Photo by _[_SpaceX_](https://unsplash.com/photos/GDdRP7U5ct0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)_ on _[_Unsplash_](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
