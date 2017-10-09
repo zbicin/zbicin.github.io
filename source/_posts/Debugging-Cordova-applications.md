@@ -6,6 +6,8 @@ tags:
   - Android
 date: 2017-10-08 17:14:11
 cover: lilly-rum-342740.jpg
+description: From Chrome Dev Tools to raw ADB logcat output. This article covers debugging in desktop web browsers and Android devices.
+
 ---
 
 Cordova gives us a great opportunity to build mobile applications using the web development stack. It does so by embeding an HTML document into a special instance of a web browser and  exhibiting several additional APIs in JavaScript.
@@ -14,7 +16,7 @@ Cordova gives us a great opportunity to build mobile applications using the web 
 
 It all sounds great until the first obstacles appear in our sight. Sooner or ~~later~~ sooner we need to test the application and debug all of the unexpected behaviours. There are several ways of doing so, depending on the version of the device we want to test.
 
-This article covers debugging in desktop web browsers and Android devices.
+From Chrome Dev Tools to raw ADB logcat output. This article covers debugging in desktop web browsers and Android devices.
 
 ## Serving application as a webpage using cordova serve
 
@@ -60,11 +62,11 @@ Some time ago, Google introduced the Remote Debugging functionality in Chrome an
 
 While Chrome Remote Debugging establishes connection with the target device via USB, weinre sets up a regular HTTP connection via the network. It makes the configuration a little bit more complicated, however we are not restricted to Chrome browser anymore which might be useful [when debugging older devices](#android4).
 
-## adb logcat
+## ADB logcat
 
 It may happen that the application crashes right after it starts e.g. because of some little syntax error that is unsupported by the target browser. Therefore neither Chrome Remote Debugging or Weinre may be able to attach themselves to the app soon enough to catch and display the error.
 
-In such a case we can still grab some error output by attaching our device via a USB cable and using the `adb logcat` command. It dumps logs produced by the device, including ones coming from the embeded WebView and/or the native Android Browser.
+In such a case we can still grab some error output by attaching our device via a USB cable and using the `adb logcat` command from Android SDK. It dumps logs produced by the device, including ones coming from the embeded WebView and/or the native Android Browser.
 
 1. Plug-in your mobile device to the PC using a USB cable.
 1. Run `adb logcat | grep Web` (Android 5.0.0 and newer) or `adb logcat browser:V *:S` (Android 4) in the terminal.
@@ -99,7 +101,7 @@ Thanks to this I am able to see what is going on in the application during the t
 
 In the majority of cases, debugging Cordova applications do not differ very much from debugging regular web pages. Thanks to `cordova serve` command and Chrome Remote Debugging it is much less painful that it used to be. Weinre provides very similar functionality, however its configuration may be a bit challenging at the first time.
 
-However, there are some rare situations when those three are not sufficient for the task, especially when running on a real device. If that happens, we can always use non-typical aproaches, such as hidden debug console in the app or processing raw log output from the adb.
+However, there are some rare situations when those three are not sufficient for the task, especially when running on a real device. If that happens, we can always use non-typical aproaches, such as hidden debug console in the app or processing raw log output from the ADB.
 
 Happy debugging! 🐛 
 
