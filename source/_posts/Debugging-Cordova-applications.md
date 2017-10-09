@@ -6,7 +6,7 @@ tags:
   - Android
 date: 2017-10-08 17:14:11
 cover: lilly-rum-342740.jpg
-description: From Chrome Dev Tools to raw ADB logcat output. This article covers debugging in desktop web browsers and Android devices.
+description: From Chrome Dev Tools to raw ADB logcat output. This article covers debugging in desktop web browsers as well as in Android devices.
 
 ---
 
@@ -16,7 +16,7 @@ Cordova gives us a great opportunity to build mobile applications using the web 
 
 It all sounds great until the first obstacles appear in our sight. Sooner or ~~later~~ sooner we need to test the application and debug all of the unexpected behaviours. There are several ways of doing so, depending on the version of the device we want to test.
 
-From Chrome Dev Tools to raw ADB logcat output. This article covers debugging in desktop web browsers and Android devices.
+From Chrome Dev Tools to raw ADB logcat output. This article covers debugging in desktop web browsers as well as in Android devices.
 
 ## Serving application as a webpage using cordova serve
 
