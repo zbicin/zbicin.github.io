@@ -10,7 +10,7 @@
 
     <!--Description-->
     
-        <meta name="description" content="How to code frontend and don&#39;t go bonkers">
+        <meta name="description" content="From Chrome Dev Tools to raw ADB logcat output. This article covers debugging in desktop web browsers and Android devices.">
     
 
     <!--Author-->
@@ -25,7 +25,7 @@
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="How to code frontend and don&#39;t go bonkers" />
+        <meta property="og:description" content="From Chrome Dev Tools to raw ADB logcat output. This article covers debugging in desktop web browsers and Android devices." />
     
 
     <!--Open Graph Site Name-->
@@ -183,7 +183,7 @@
                 <p>Cordova gives us a great opportunity to build mobile applications using the web development stack. It does so by embeding an HTML document into a special instance of a web browser and  exhibiting several additional APIs in JavaScript.</p>
 <img src="/2017/10/08/Debugging-Cordova-applications/cordovaBot.png" class="center" width="150" height="150" title="Apache Cordova Logo">
 <p>It all sounds great until the first obstacles appear in our sight. Sooner or <del>later</del> sooner we need to test the application and debug all of the unexpected behaviours. There are several ways of doing so, depending on the version of the device we want to test.</p>
-<p>This article covers debugging in desktop web browsers and Android devices.</p>
+<p>From Chrome Dev Tools to raw ADB logcat output. This article covers debugging in desktop web browsers and Android devices.</p>
 <h2 id="Serving-application-as-a-webpage-using-cordova-serve"><a href="#Serving-application-as-a-webpage-using-cordova-serve" class="headerlink" title="Serving application as a webpage using cordova serve"></a>Serving application as a webpage using cordova serve</h2><p>That’s the easy one. You can simply type <code>cordova serve</code> in your terminal and it will launch a web server which makes your application accessible via a regular web browser either on your PC or on your mobile device. In the first case you can simply use Chrome/Firefox Dev Tools in order to debug.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ cordova serve</div><div class="line">[cordova] starting app server...</div><div class="line">[cordova] listening on 10.7.206.254:3000</div><div class="line">[cordova] </div><div class="line">[cordova] ctrl-c to stop the server</div><div class="line">[cordova]</div></pre></td></tr></table></figure>
 <img src="/2017/10/08/Debugging-Cordova-applications/devtools.png" class="center" width="570" title="Debugging using Chrome Dev Tools">
@@ -204,8 +204,8 @@
 <h2 id="Weinre"><a href="#Weinre" class="headerlink" title="Weinre"></a>Weinre</h2><p><a href="https://people.apache.org/~pmuellr/weinre/docs/latest/" target="_blank" rel="external">Weinre</a> is very similar to Chrome Dev Tools, since they both share large parts of code. Nevertheless, they work a little bit different.</p>
 <img src="/2017/10/08/Debugging-Cordova-applications/weinre.png" class="center" width="577" title="Weinre Dev Tools">
 <p>While Chrome Remote Debugging establishes connection with the target device via USB, weinre sets up a regular HTTP connection via the network. It makes the configuration a little bit more complicated, however we are not restricted to Chrome browser anymore which might be useful <a href="#android4">when debugging older devices</a>.</p>
-<h2 id="adb-logcat"><a href="#adb-logcat" class="headerlink" title="adb logcat"></a>adb logcat</h2><p>It may happen that the application crashes right after it starts e.g. because of some little syntax error that is unsupported by the target browser. Therefore neither Chrome Remote Debugging or Weinre may be able to attach themselves to the app soon enough to catch and display the error.</p>
-<p>In such a case we can still grab some error output by attaching our device via a USB cable and using the <code>adb logcat</code> command. It dumps logs produced by the device, including ones coming from the embeded WebView and/or the native Android Browser.</p>
+<h2 id="ADB-logcat"><a href="#ADB-logcat" class="headerlink" title="ADB logcat"></a>ADB logcat</h2><p>It may happen that the application crashes right after it starts e.g. because of some little syntax error that is unsupported by the target browser. Therefore neither Chrome Remote Debugging or Weinre may be able to attach themselves to the app soon enough to catch and display the error.</p>
+<p>In such a case we can still grab some error output by attaching our device via a USB cable and using the <code>adb logcat</code> command from Android SDK. It dumps logs produced by the device, including ones coming from the embeded WebView and/or the native Android Browser.</p>
 <ol>
 <li>Plug-in your mobile device to the PC using a USB cable.</li>
 <li>Run <code>adb logcat | grep Web</code> (Android 5.0.0 and newer) or <code>adb logcat browser:V *:S</code> (Android 4) in the terminal.</li>
@@ -216,7 +216,7 @@
 <img src="/2017/10/08/Debugging-Cordova-applications/debugConsole.png" class="center" width="270" title="Output provided by the adb">
 <p>Thanks to this I am able to see what is going on in the application during the testing phase in the field or after the release. It also allowed me to track some of the bugs that were foreseen during the devlopment phase (mostly related to the app’s lifecycle).</p>
 <h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>In the majority of cases, debugging Cordova applications do not differ very much from debugging regular web pages. Thanks to <code>cordova serve</code> command and Chrome Remote Debugging it is much less painful that it used to be. Weinre provides very similar functionality, however its configuration may be a bit challenging at the first time.</p>
-<p>However, there are some rare situations when those three are not sufficient for the task, especially when running on a real device. If that happens, we can always use non-typical aproaches, such as hidden debug console in the app or processing raw log output from the adb.</p>
+<p>However, there are some rare situations when those three are not sufficient for the task, especially when running on a real device. If that happens, we can always use non-typical aproaches, such as hidden debug console in the app or processing raw log output from the ADB.</p>
 <p>Happy debugging! 🐛 </p>
 <p><em>Photo by </em><a href="https://unsplash.com/photos/15YTRXKuJ14?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="external"><em>Lilly Rum</em></a><em> on </em><a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="external"><em>Unsplash</em></a></p>
 
