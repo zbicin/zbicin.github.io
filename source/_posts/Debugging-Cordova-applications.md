@@ -5,7 +5,7 @@ tags:
   - Adobe PhoneGap
   - Android
 date: 2017-10-08 17:14:11
-cover: ./lilly-rum-342740.jpg
+cover: lilly-rum-342740.jpg
 ---
 
 Cordova gives us a great opportunity to build mobile applications using the web development stack. It does so by embeding an HTML document into a special instance of a web browser and  exhibiting several additional APIs in JavaScript.
