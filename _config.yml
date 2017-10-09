@@ -75,11 +75,11 @@ pagination_dir: page
 theme: clean-blog
 
 # Deployment
-## Docs: https://hexo.io/docs/deployment.html
+## Docs: https://hexo.io/docs/deploymehnt.html
 deploy:
   type: git
   repo: git@github.com:zbicin/zbicin.github.io.git
-  branch: gh-pages
+  branch: master
 
 feed:
   type: atom
@@ -87,3 +87,5 @@ feed:
   limit: 20
   hub:
   content:
+
+cname: zbic.in
