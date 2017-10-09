@@ -8,10 +8,6 @@ date: 2017-10-08 17:14:11
 cover: ./lilly-rum-342740.jpg
 ---
 
-<center>_Photo by _[_Lilly Rum_](https://unsplash.com/photos/15YTRXKuJ14?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)_ on _[_Unsplash_](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)</center>
-
-# Debugging Cordova applications
-
 Cordova gives us a great opportunity to build mobile applications using the web development stack. It does so by embeding an HTML document into a special instance of a web browser and  exhibiting several additional APIs in JavaScript.
 
 {% asset_img center cordovaBot.png 150 150 "Apache Cordova Logo" %}
@@ -106,3 +102,5 @@ In the majority of cases, debugging Cordova applications do not differ very much
 However, there are some rare situations when those three are not sufficient for the task, especially when running on a real device. If that happens, we can always use non-typical aproaches, such as hidden debug console in the app or processing raw log output from the adb.
 
 Happy debugging! 🐛 
+
+_Photo by _[_Lilly Rum_](https://unsplash.com/photos/15YTRXKuJ14?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)_ on _[_Unsplash_](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
