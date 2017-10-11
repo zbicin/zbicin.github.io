@@ -2,6 +2,7 @@
 title: The concept of an 'idea bag'
 date: 2017-04-03
 tags: Other
+cover: lee-campbell-191016.jpg
 ---
 
 tl;dr: take notes of random, interrupting ideas.
@@ -16,4 +17,6 @@ Having that gives me a huge benefit that I still tend to underestimate.
 
 It *helps maintaining a clear state of mind*, without the baggage of remembering something. Noting interrupting thoughts down allows to get back on track immediately while keeping the brain satisfied, because the super-exciting idea will be eventually taken care of.
 
-I strongly encourage you to give it a try. Next time you want to stay focused open up a notepad and store all your random ideas that are not related to your current work there. Then immediately get back to your main task and take care of the ideas only after you finish the main issue.
+I strongly encourage you to give it a try. Next time you want to stay focused open up a notepad and store all your random ideas that are not related to your current work there. Then immediately get back to your main task and take care of the ideas only after yo
+
+{% unsplash p qNPESem_t4I "Lee Campbell" %}
