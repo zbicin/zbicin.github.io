@@ -29,3 +29,6 @@ figure.highlight + img {
 .post-preview > .post-meta > a {
   color: #808080;
 }
+.unsplash-credit {
+  font-style: italic;
+}
