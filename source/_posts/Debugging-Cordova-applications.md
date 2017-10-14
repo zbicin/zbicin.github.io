@@ -10,7 +10,7 @@ description: From Chrome Dev Tools to raw ADB logcat output. This article covers
 
 ---
 
-Cordova gives us a great opportunity to build mobile applications using the web development stack. It does so by embeding an HTML document into a special instance of a web browser and  exhibiting several additional APIs in JavaScript.
+Apache Cordova gives us a great opportunity to build mobile applications using the web development stack. It does so by embedding an HTML document into a special instance of a web browser and  exhibiting several additional APIs in JavaScript.
 
 {% asset_img center cordovaBot.png 150 150 "Apache Cordova Logo" %}
 
