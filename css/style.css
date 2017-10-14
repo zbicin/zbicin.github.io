@@ -639,3 +639,9 @@ figure.highlight + img {
 .post-categories a {
   text-decoration: none;
 }
+.post-preview > .post-meta > a {
+  color: #808080;
+}
+.unsplash-credit {
+  font-style: italic;
+}
