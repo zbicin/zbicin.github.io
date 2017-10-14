@@ -52,7 +52,7 @@ Some time ago, Google introduced the Remote Debugging functionality in Chrome an
 
 {% asset_img center remote.png Nexus 5 device listed in the Remote Targets section %}
 
-<a name="android4"></a>Unfortunately, it doesn't work with Cordova applications running under Android 4. The reason behind that is that Chrome was not a default Android browser back then. Therefore, Cordova applications are hosted by a WebView which bases on the so-called Android Browser, not Chrome.
+<a name="android4"></a> Unfortunately, it doesn't work with Cordova applications running under Android 4. The reason behind that is that Chrome was not a default Android browser back then. Therefore, Cordova applications are hosted by a WebView which bases on the so-called Android Browser, not Chrome.
 
 ## Weinre
 
