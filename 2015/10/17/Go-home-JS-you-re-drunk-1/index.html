@@ -42,6 +42,10 @@
 
     <!--Page Cover-->
     
+        <meta property="og:image" content="http://zbic.in/2015/10/17/Go-home-JS-you-re-drunk-1/eaters-collective-109606.jpg" />
+        <meta name="twitter:image:src" content="http://zbic.in/2015/10/17/Go-home-JS-you-re-drunk-1/eaters-collective-109606.jpg">
+        <meta itemprop="image" content="http://zbic.in/2015/10/17/Go-home-JS-you-re-drunk-1/eaters-collective-109606.jpg">     
+    
 
         <meta name="twitter:card" content="summary_large_image">
     
@@ -153,7 +157,7 @@
     <!-- Page Header -->
 <!-- Set your background image for this header in your post front-matter: cover -->
 
-<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+<header class="intro-header" style="background-image: url('eaters-collective-109606.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -194,6 +198,7 @@
 <p>the <code>isCondition</code> would eventually evaluate to <code>false</code> and everything’s gonna work as expected. However, if we compared <code>isCondition</code> to <code>false</code>:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(isCondition == <span class="literal">false</span>) &#123; <span class="comment">/* ... */</span> &#125;</div><div class="line"><span class="comment">// or even better</span></div><div class="line"><span class="keyword">if</span>(isCondition === <span class="literal">false</span>) &#123; <span class="comment">/* ... */</span> &#125;</div></pre></td></tr></table></figure>
 <p>the code inside the brackets would not be launched. The <code>isCondition</code> <em>would not be casted to a boolean value</em> and <code>undefined</code> is definately not equal to <code>false</code> so the whole expression becomes falsy. The same principle applies in case of <code>myArray</code> being equal to <code>null</code> by any chance. Suddenly the term <em>Ninja JS Developer</em> got a brand new meaning.</p>
+<p class="unsplash-credit">Photo by <a href="https://unsplash.com/photos/rS2OpgFbeMk" target="_blank">Eaters Collective</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</p>
 
 
                 <!-- Tags and categories -->
