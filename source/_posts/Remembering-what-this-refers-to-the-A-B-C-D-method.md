@@ -2,6 +2,7 @@
 title: 'Remembering what ''this'' refers to - the A, B, C, D method'
 date: 2016-09-04
 tags: JavaScript
+cover: diomari-madulara-110583.jpg
 ---
 
 The `this` reference and how it can dynamically change in a runtime is one of the characteristic features of JavaScript. As far as I know, there is no analogy of this behavior in any other popular programming language.
@@ -63,3 +64,5 @@ whatIsThis(); // window, process or undefined
 
 And that's pretty much it. :) You can check this behavior by yourself, using
 [a fiddle I've created](https://jsfiddle.net/zbicin/owa92sa5/). It contains example code which shows how the `this` reference changes according to the mentioned rules.
+
+{% unsplash p FFZjSpUwc_I "Diomari Madulara" %}

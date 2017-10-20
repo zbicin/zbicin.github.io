@@ -2,6 +2,7 @@
 title: Music Driven Development
 date: 2017-03-14
 tags: Other
+cover: cover.jpg
 ---
 
 Back in the days, I tweeted few words about staying focused:
@@ -24,3 +25,5 @@ The good thing about listening to an album is that you can set a pause after a p
 Interestingly, I discovered that I have a set of music albums or Spotify playlists that I can listen to during literally the whole workday and don't get bored. They include e.g. chillstep and latino music playlists as well as some albums from Kanye West (especially [The College Dropout](https://open.spotify.com/album/1NRRN5RWwfuLmQdjshz0L7)!), Limp Bizkit or Bob Marley. I haven't determined what is their common part though. It's not the genre nor the language, that's for sure.
 
 Well... it's seems that I'm a pioneer of the music driven development. ;)
+
+{% unsplash p dBwadhWa-lI "Malte Wingen" %}

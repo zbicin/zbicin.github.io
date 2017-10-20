@@ -2,6 +2,7 @@
 title: 'Go home JS, you''re drunk'
 date: 2015-10-17
 tags: JavaScript
+cover: eaters-collective-109606.jpg
 ---
 
 What would be the result of the following code:
@@ -31,3 +32,5 @@ the `isCondition` would eventually evaluate to `false` and everything's gonna wo
 ```
 
 the code inside the brackets would not be launched. The `isCondition` *would not be casted to a boolean value* and `undefined` is definately not equal to `false` so the whole expression becomes falsy. The same principle applies in case of `myArray` being equal to `null` by any chance. Suddenly the term _Ninja JS Developer_ got a brand new meaning.
+
+{% unsplash p rS2OpgFbeMk "Eaters Collective" %}
