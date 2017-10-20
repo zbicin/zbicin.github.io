@@ -32,3 +32,8 @@ figure.highlight + img {
 .unsplash-credit {
   font-style: italic;
 }
+img+center {
+  font-size: 0.8em;
+  opacity: 0.8;
+  margin-top: 4px;
+}

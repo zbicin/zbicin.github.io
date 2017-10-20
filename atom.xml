@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zbic.in/"/>
-  <updated>2017-10-14T19:11:22.301Z</updated>
+  <updated>2017-10-20T22:20:51.154Z</updated>
   <id>http://zbic.in/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NodeSchool Lodz #8</title>
+    <link href="http://zbic.in/2017/10/20/NodeSchool-Lodz-8/"/>
+    <id>http://zbic.in/2017/10/20/NodeSchool-Lodz-8/</id>
+    <published>2017-10-20T20:01:18.000Z</published>
+    <updated>2017-10-20T22:20:51.154Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;On the last Saturday the 8th edition of &lt;a href=&quot;https://nodeschool.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;NodeSchool&lt;/a&gt; took place in Łódź,
+    
+    </summary>
+    
+    
+      <category term="NodeSchool" scheme="http://zbic.in/tags/NodeSchool/"/>
+    
+      <category term="Node.js" scheme="http://zbic.in/tags/Node-js/"/>
+    
+  </entry>
   
   <entry>
     <title>Debugging Cordova applications</title>
