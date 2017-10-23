@@ -29,6 +29,13 @@ figure.highlight + img {
 .post-preview > .post-meta > a {
   color: #808080;
 }
+.post-preview > a > .post-title {
+  margin-bottom: 5px;
+}
+.post-preview > a > .post-subtitle {
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
 .unsplash-credit {
   font-style: italic;
 }
@@ -36,4 +43,8 @@ img+center {
   font-size: 0.8em;
   opacity: 0.8;
   margin-top: 4px;
+}
+.post-heading > h2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
