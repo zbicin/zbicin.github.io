@@ -1,5 +1,6 @@
 ---
 title: 'NodeSchool Lodz #8'
+subtitle: Brief summary of the 8th edition of the workshops.
 date: 2017-10-20 20:01:18
 tags:
  - NodeSchool

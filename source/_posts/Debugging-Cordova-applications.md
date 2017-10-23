@@ -1,5 +1,6 @@
 ---
 title: Debugging Cordova applications
+subtitle: From Chrome Dev Tools to raw ADB logcat output .
 tags:
   - Apache Cordova
   - Adobe PhoneGap
