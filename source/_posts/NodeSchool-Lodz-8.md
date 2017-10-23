@@ -15,7 +15,7 @@ On the last Saturday the 8th edition of [NodeSchool](https://nodeschool.io) took
 
 > NodeSchool is an open project of free workshops organized to help people learn Node.js and web software skills. It is aimed both for programmers who know nothing about Node.js and for Node.js programmers who want to learn new things. Source: https://nodeschool.io/lodz/
 
-What's especially rewarding is that the event became receiving great recognition from the local IT companies. As previously we met at the new office of [Comarch](http://www.comarch.pl/). In addition to this, we've been supported by [BinarApps](https://binarapps.com/) and [4developers Łódź](https://lodz.4developers.org.pl) who sposored rewards for the participants.  
+What's especially rewarding is that the event became receiving great recognition from the local IT companies. As previously, we met at the new office of [Comarch](http://www.comarch.pl/). In addition to this, we've been supported by [BinarApps](https://binarapps.com/) and [4developers Łódź](https://lodz.4developers.org.pl) who sposored rewards for the participants.  
 
 {% asset_img center tito.png "Almost all of the tickets were gone in the first two days, woop woop!" %}
 <center>Almost all of the tickets were gone in the first two days, woop woop!</center>
