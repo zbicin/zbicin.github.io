@@ -6,9 +6,10 @@ tags:
  - Node.js
 cover: header.jpg
 updated: 2017-10-23 20:50:00
+description: On the last Saturday the 8th edition of NodeSchool took place in Łódź, which concerned fundamentals of the React library.
 ---
 
-On the last Saturday the 8th edition of [NodeSchool](https://nodeschool.io) took place in Łódź, which considered fundamentals of the React library. The workshops were led by [Mateusz](https://twitter.com/pokorson) with support of [Bartosz](https://twitter.com/btmpl) (who gave a great presentation about most common beginner mistakes) and Piotr. It was the third time I had pleasure of organizing this meeting.
+On the last Saturday the 8th edition of [NodeSchool](https://nodeschool.io) took place in Łódź, which concerned fundamentals of the React library. The workshops were led by [Mateusz](https://twitter.com/pokorson) with support of [Bartosz](https://twitter.com/btmpl) (who gave a great presentation about most common beginner mistakes) and Piotr. It was the third time I had pleasure of organizing this meeting.
 
 {% asset_img center workshops.jpg "Mateusz speaking about React" %}
 <center>Mateusz speaking about React</center>
