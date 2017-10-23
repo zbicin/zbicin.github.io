@@ -5,6 +5,7 @@ tags:
  - NodeSchool
  - Node.js
 cover: header.jpg
+updated: 2017-10-23 20:50:00
 ---
 
 On the last Saturday the 8th edition of [NodeSchool](https://nodeschool.io) took place in Łódź, which considered fundamentals of the React library. The workshops were led by [Mateusz](https://twitter.com/pokorson) with support of [Bartosz](https://twitter.com/btmpl) (who gave a great presentation about most common beginner mistakes) and Piotr. It was the third time I had pleasure of organizing this meeting.
@@ -20,6 +21,10 @@ What's especially rewarding is that the event became receiving great recognition
 <center>Almost all of the tickets were gone in the first two days, woop woop!</center>
 
 I'd like to thank all of the attendants, mentors and sponsors for taking part in the event and hope to see you next time!
+
+Materials from workshop:
+ - [Slides](https://slides.com/vrael560/deck-8-12/fullscreen)
+ - [API server](https://gist.github.com/pokorson/4d5e301b14a52b84f845295350b78101)
 
 Follow NodeSchool Lodz in social media:
 - [Facebook](https://www.facebook.com/nodeschoollodz)
