@@ -109,8 +109,7 @@
       
       
         &lt;p&gt;Back in the days, I tweeted few words about staying focused:&lt;/p&gt;
-&lt;p&gt;&amp;lt;center&amp;gt;
-&amp;lt;blockquote class=&amp;quot;twitter-tweet&amp;quot; data-ca
+&lt;center&gt;&lt;br&gt;&lt;blockquote class=&quot;twitter-tweet&quot; data-cards=&quot;hidden&quot; data-l
       
     
     </summary>
@@ -131,7 +130,7 @@
     
       
       
-        &lt;p&gt;The 6th edition of NodeSchool workshops in Łódź is history now. The main topic of the meeting was &#39;ES6 and beyond&#39;. During the event ther
+        &lt;p&gt;The 6th edition of NodeSchool workshops in Łódź is history now. The main topic of the meeting was ‘ES6 and beyond’. During the event ther
       
     
     </summary>
@@ -175,7 +174,7 @@
     
       
       
-        &lt;p&gt;Putting all of these toghether was apparently a non-trivial task, so I decided to setup a simple project for a future reference. I&#39;m quit
+        &lt;p&gt;Putting all of these toghether was apparently a non-trivial task, so I decided to setup a simple project for a future reference. I’m quit
       
     
     </summary>
@@ -206,7 +205,7 @@
     
       
       
-        &lt;p&gt;I&#39;ve made a UserScript that periodically displays currently tracked issue in JIRA Tempo Timesheets using HTML5 Notification API. It was a
+        &lt;p&gt;I’ve made a UserScript that periodically displays currently tracked issue in JIRA Tempo Timesheets using HTML5 Notification API. It was a
       
     
     </summary>
@@ -230,7 +229,7 @@
       
       
         &lt;p&gt;What would be the result of the following code:&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;l
       
     
     </summary>
@@ -251,7 +250,7 @@
     
       
       
-        &lt;p&gt;I can&#39;t believe that I couldn&#39;t find a jQuery plugin or a vanilla-JS snippet that would parse the URL parameters infallibly. All of the s
+        &lt;p&gt;I can’t believe that I couldn’t find a jQuery plugin or a vanilla-JS snippet that would parse the URL parameters infallibly. All of the s
       
     
     </summary>

@@ -672,3 +672,7 @@ img+center {
   margin-top: 18px;
   margin-bottom: 14px;
 }
+iframe[src^="https://gfycat.com/ifr/"] {
+  display: block;
+  margin: auto;
+}
