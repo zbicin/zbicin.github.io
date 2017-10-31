@@ -190,14 +190,14 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>I can’t believe that I couldn’t find a jQuery plugin or a vanilla-JS snippet that would parse the URL parameters infallibly. All of the solutions I stumbled upon were inconvenient to use or, probably surprisingly for their authors, failed when a parameter’s value contained the equal sign.</p>
+                <p>I can't believe that I couldn't find a jQuery plugin or a vanilla-JS snippet that would parse the URL parameters infallibly. All of the solutions I stumbled upon were inconvenient to use or, probably surprisingly for their authors, failed when a parameter's value contained the equal sign.</p>
 <p>It felt like a right time to save the world myself, therefore I came up with the following code:</p>
-<script src="//gist.github.com/72aa8fc4c3e97f7321bc.js"></script>
+<p><script src="//gist.github.com/72aa8fc4c3e97f7321bc.js"></script></p>
 <p>The snippet transforms this:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://example.com/lorem?foo=bar&amp;foo2=baz&amp;foo3=</div></pre></td></tr></table></figure>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://example.com/lorem?foo=bar&amp;foo2=baz&amp;foo3=</div></pre></td></tr></table></figure></p>
 <p>into this (mind the missing <code>foo3</code> parameter):</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">foo</span>: <span class="string">"bar"</span>,</div><div class="line">    <span class="attr">foo2</span>: <span class="string">"baz"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>The code has been tested on major browsers and seems to work flawlessly. However if anything goes wrong (naah, it won’t happen), <a href="https://twitter.com/zbicin" target="_blank" rel="external">let me know about it</a>.</p>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">foo</span>: <span class="string">"bar"</span>,</div><div class="line">    <span class="attr">foo2</span>: <span class="string">"baz"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>The code has been tested on major browsers and seems to work flawlessly. However if anything goes wrong (naah, it won't happen), <a href="https://twitter.com/zbicin" target="_blank" rel="external">let me know about it</a>.</p>
 
 
                 <!-- Tags and categories -->

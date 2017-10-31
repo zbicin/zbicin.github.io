@@ -192,23 +192,23 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <p>Back in 2012, CSS3 was a novelty and only few heard and used modern JavaScript frameworks such as heroic AngularJS. It was still a <em>jQuery era</em> in web development which, as we know now, was soon to collapse.</p>
 <p>By that time, jQuery was used for many purposes and one of them was animating objects on webpages. It worked quite well (and still do), however with CSS3 being supported by every modern browser, we would be foulish not to use it.</p>
-<p>I’ll make the point concise and simple: <em>using jQuery’s <code>.animation()</code> is a huge no-go</em>. You move the responsibility of controlling animation to your JavaScript code and prevent the browser from optimizing it. Do it only if you have no other option (or time/project budget to spare).</p>
-<p>Instead one should <em>use CSS <a href="https://css-tricks.com/almanac/properties/t/transition/" target="_blank" rel="external">transition</a> and <a href="https://css-tricks.com/almanac/properties/a/animation/" target="_blank" rel="external">animation</a> properties</em>. Besides being more appropriate for this task from the logical point of view (we’re modifying the way how things look) it allows the browser to optimize it on its own and delegate part of processing to the GPU.</p>
-<p><a href="http://csstriggers.com/" target="_blank" rel="external">According to the csstriggers.com</a>, properties that can be transformed with as little effort for the browser as possible are: </p>
+<p>I'll make the point concise and simple: <em>using jQuery's <code>.animation()</code> is a huge no-go</em>. You move the responsibility of controlling animation to your JavaScript code and prevent the browser from optimizing it. Do it only if you have no other option (or time/project budget to spare).</p>
+<p>Instead one should <em>use CSS <a href="https://css-tricks.com/almanac/properties/t/transition/" target="_blank" rel="external">transition</a> and <a href="https://css-tricks.com/almanac/properties/a/animation/" target="_blank" rel="external">animation</a> properties</em>. Besides being more appropriate for this task from the logical point of view (we're modifying the way how things look) it allows the browser to optimize it on its own and delegate part of processing to the GPU.</p>
+<p><a href="http://csstriggers.com/" target="_blank" rel="external">According to the csstriggers.com</a>, properties that can be transformed with as little effort for the browser as possible are:</p>
 <ul>
-<li><code>backface-visibility</code>, </li>
+<li><code>backface-visibility</code>,</li>
 <li><code>perspective</code></li>
 </ul>
 <p>and most imporantly</p>
 <ul>
-<li><code>opacity</code> and </li>
-<li><code>transform</code>. </li>
+<li><code>opacity</code> and</li>
+<li><code>transform</code>.</li>
 </ul>
 <p>Using <code>top</code>, <code>left</code>, <code>margin</code>, <code>height</code> or <code>width</code> triggers the paint event which causes additional work to be performed by the CPU. <em>Therefore, i.e. modifying <code>transform: translate(x,y)</code> instead of <code>top: y; left: x;</code> pair will result in slightly smoother animation</em>.</p>
-<p>I don’t want to elaborate much on that topic. However if you don’t trust my word, <a href="http://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/" target="_blank" rel="external">Paul Irish made a great blogpost</a> where he digs into it in great detail. I can highly reccomend reading it if you want to know what happens under the hood.</p>
-<p>If you’ve been reading this far, I’m sorry to disappoint you. In majority of cases, your animations will look almost the same as long as you avoid jQuery and use CSS to perform them…</p>
-<p>…along with a desktop browser. Your CPU will manage to calculate everything on time and reach the magical 60FPS.</p>
-<p>The thing is, avoiding unnecessary paint events can make a difference while using mobile devices such as smartphones, which have limited processing capabilities. A computer with a little over 1MHz was enough <a href="https://en.wikipedia.org/wiki/Apollo_Guidance_Computer#Timing" target="_blank" rel="external">to get Apollo 11 to the moon</a>. I don’t want to see my mobile stumble over a dropdown menu.</p>
+<p>I don't want to elaborate much on that topic. However if you don't trust my word, <a href="http://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/" target="_blank" rel="external">Paul Irish made a great blogpost</a> where he digs into it in great detail. I can highly reccomend reading it if you want to know what happens under the hood.</p>
+<p>If you've been reading this far, I'm sorry to disappoint you. In majority of cases, your animations will look almost the same as long as you avoid jQuery and use CSS to perform them...</p>
+<p>...along with a desktop browser. Your CPU will manage to calculate everything on time and reach the magical 60FPS.</p>
+<p>The thing is, avoiding unnecessary paint events can make a difference while using mobile devices such as smartphones, which have limited processing capabilities. A computer with a little over 1MHz was enough <a href="https://en.wikipedia.org/wiki/Apollo_Guidance_Computer#Timing" target="_blank" rel="external">to get Apollo 11 to the moon</a>. I don't want to see my mobile stumble over a dropdown menu.</p>
 
 
                 <!-- Tags and categories -->
