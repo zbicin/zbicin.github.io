@@ -63,3 +63,6 @@ iframe[src^="https://gfycat.com/ifr/"] {
   display: block;
   margin: auto;
 }
+article .container .row blockquote footer {
+  padding-bottom: 0;
+}

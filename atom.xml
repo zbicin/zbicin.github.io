@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zbic.in/"/>
-  <updated>2017-10-23T19:42:54.603Z</updated>
+  <updated>2017-11-01T20:28:29.394Z</updated>
   <id>http://zbic.in/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Learn JavaScript, not frameworks</title>
+    <link href="http://zbic.in/2017/11/01/Learn-JavaScript-not-frameworks/"/>
+    <id>http://zbic.in/2017/11/01/Learn-JavaScript-not-frameworks/</id>
+    <published>2017-11-01T16:30:48.000Z</published>
+    <updated>2017-11-01T20:28:29.394Z</updated>
+    
+    <summary type="html">
+    
+      A reasonable way to keep up with changes in the JavaScript universe.
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://zbic.in/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>NodeSchool Lodz #8</title>
