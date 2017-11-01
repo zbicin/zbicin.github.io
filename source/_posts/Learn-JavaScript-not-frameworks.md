@@ -33,6 +33,6 @@ If you would like to keep up with changes you'd have to constantly learn new fra
 
 ### The reasonable approach
 
-What I suggest instead is choosing whatever library you like most (because of syntax, community support or tossing a coin) and sticking to it. In the meantime learn general ideas, architectural patterns and JavaScript fundamentals. Concepts of e.g. DOM manipulation, inheritance, routing, a component or a controller are universal and commonly used in all of the modern libraries. Having those basics, you'll be able to pick any new tool in the future and **become considerably good at it within just a week or two**. 
+What I suggest instead is choosing whatever library you like most (because of syntax, community support or tossing a coin) and sticking to it. In the meantime learn general ideas, architectural patterns and JavaScript fundamentals. Concepts of e.g. DOM manipulation, inheritance, routing, a component or a controller are universal and commonly used in all of the modern libraries. Having those basics, you'll be able to pick **any new tool in the future** and become considerably good at it within just a week or two. 
 
 {% unsplash p OQSCtabGkSY "Jessica Ruscello" %}
