@@ -3,6 +3,7 @@ title: 'Learn JavaScript, not frameworks'
 tags: JavaScript
 date: 2017-11-01 16:30:48
 cover: jessica-ruscello-196422.jpg
+cover_color: d0bca4
 subtitle: A reasonable way to keep up with changes in the JavaScript universe.
 description: A reasonable way to keep up with changes in the JavaScript universe.
 ---

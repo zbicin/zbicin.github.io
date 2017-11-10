@@ -3,6 +3,8 @@ title: 'Remembering what ''this'' refers to - the A, B, C, D method'
 date: 2016-09-04
 tags: JavaScript
 cover: diomari-madulara-110583.jpg
+cover_color: f5e9da
+backdrop_opacity: 0.7
 ---
 
 The `this` reference and how it can dynamically change in a runtime is one of the characteristic features of JavaScript. As far as I know, there is no analogy of this behavior in any other popular programming language.

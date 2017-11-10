@@ -6,6 +6,7 @@ tags:
  - NodeSchool
  - Node.js
 cover: header.jpg
+cover_color: 3a3e64
 updateDate: 2017-10-23
 description: Brief summary of the 8th edition of the workshops.
 ---

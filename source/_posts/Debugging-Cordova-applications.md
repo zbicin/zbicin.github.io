@@ -7,6 +7,7 @@ tags:
   - Android
 date: 2017-10-08 17:14:11
 cover: lilly-rum-342740.jpg
+cover_color: 323034
 description: From Chrome Dev Tools to raw ADB logcat output. This article covers debugging in desktop web browsers as well as in Android devices.
 
 ---

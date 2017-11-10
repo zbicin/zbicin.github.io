@@ -4,6 +4,7 @@ subtitle: Take notes of random, interrupting ideas.
 date: 2017-04-03
 tags: Other
 cover: lee-campbell-191016.jpg
+cover_color: 493723
 updateDate: 2017-10-31
 description: Take notes of random, interrupting ideas.
 ---

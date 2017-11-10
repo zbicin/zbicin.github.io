@@ -3,6 +3,7 @@ title: Music Driven Development
 date: 2017-03-14
 tags: Other
 cover: cover.jpg
+cover_color: ffdb32
 ---
 
 Back in the days, I tweeted few words about staying focused:

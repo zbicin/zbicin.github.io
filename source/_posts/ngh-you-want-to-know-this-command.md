@@ -1,8 +1,10 @@
 ---
 title: ngh - you want to know this command
+subtitle: Easy deployment of Angular projects to GitHub Pages
 date: 2017-04-16
 tags: Angular
 cover: cover.jpg
+cover_color: 627286
 ---
 
 Back in the days there was a command in the [Angular CLI](https://cli.angular.io/) named `ng ghpages`. It was intended to provide a trival way of publishing the application generated with `ng`. It was building the project, grabbing the contents of the `dist` directory and pushing them to the `gh-pages` branch of the repository. Then, the application was available online at `<USERNAME>.github.io/<REPOSITORY NAME>`.

@@ -3,6 +3,8 @@ title: 'Go home JS, you''re drunk'
 date: 2015-10-17
 tags: JavaScript
 cover: eaters-collective-109606.jpg
+cover_color: c8bbad
+backdrop_opacity: 0.7
 ---
 
 What would be the result of the following code:
