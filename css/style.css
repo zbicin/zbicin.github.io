@@ -698,6 +698,10 @@ article .container .row blockquote footer {
   background-color: #000;
   opacity: 0;
 }
+.about-photo {
+  float: right;
+  margin: 30px 0 40px 40px;
+}
 @media only screen and (max-width: 767px) {
   .intro-header {
     height: auto;
