@@ -66,3 +66,28 @@ iframe[src^="https://gfycat.com/ifr/"] {
 article .container .row blockquote footer {
   padding-bottom: 0;
 }
+.intro-header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  max-height: 800px;
+  min-height: 400px;
+}
+.intro-header .backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0;
+}
+@media only screen and (max-width: 767px) {
+  .intro-header {
+    height: auto;
+    min-height: 0;
+  }
+}

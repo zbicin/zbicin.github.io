@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Krzysztof Zbiciński - Blog</title>
   
-  <subtitle>How to code frontend and don&#39;t go bonkers</subtitle>
+  <subtitle>Pragmatic web development</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zbic.in/"/>
-  <updated>2017-11-01T20:49:23.459Z</updated>
+  <updated>2017-11-10T16:43:53.230Z</updated>
   <id>http://zbic.in/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://zbic.in/2017/11/01/Learn-JavaScript-not-frameworks/"/>
     <id>http://zbic.in/2017/11/01/Learn-JavaScript-not-frameworks/</id>
     <published>2017-11-01T16:30:48.000Z</published>
-    <updated>2017-11-01T20:49:23.459Z</updated>
+    <updated>2017-11-10T16:43:53.230Z</updated>
     
     <summary type="html">
     
@@ -39,7 +39,7 @@
     <link href="http://zbic.in/2017/10/20/NodeSchool-Lodz-8/"/>
     <id>http://zbic.in/2017/10/20/NodeSchool-Lodz-8/</id>
     <published>2017-10-20T20:01:18.000Z</published>
-    <updated>2017-10-23T19:42:54.603Z</updated>
+    <updated>2017-11-10T16:47:22.189Z</updated>
     
     <summary type="html">
     
@@ -59,7 +59,7 @@
     <link href="http://zbic.in/2017/10/08/Debugging-Cordova-applications/"/>
     <id>http://zbic.in/2017/10/08/Debugging-Cordova-applications/</id>
     <published>2017-10-08T17:14:11.000Z</published>
-    <updated>2017-10-23T20:08:45.841Z</updated>
+    <updated>2017-11-10T16:49:22.117Z</updated>
     
     <summary type="html">
     
@@ -81,7 +81,7 @@
     <link href="http://zbic.in/2017/04/16/ngh-you-want-to-know-this-command/"/>
     <id>http://zbic.in/2017/04/16/ngh-you-want-to-know-this-command/</id>
     <published>2017-04-16T00:00:00.000Z</published>
-    <updated>2017-10-11T17:00:47.607Z</updated>
+    <updated>2017-11-10T16:52:48.276Z</updated>
     
     <summary type="html">
     
@@ -102,7 +102,7 @@
     <link href="http://zbic.in/2017/04/03/The-concept-of-an-idea-bag/"/>
     <id>http://zbic.in/2017/04/03/The-concept-of-an-idea-bag/</id>
     <published>2017-04-03T00:00:00.000Z</published>
-    <updated>2017-10-31T12:57:41.683Z</updated>
+    <updated>2017-11-10T16:55:37.151Z</updated>
     
     <summary type="html">
     
@@ -120,7 +120,7 @@
     <link href="http://zbic.in/2017/03/14/Music-Driven-Development/"/>
     <id>http://zbic.in/2017/03/14/Music-Driven-Development/</id>
     <published>2017-03-14T00:00:00.000Z</published>
-    <updated>2017-10-20T21:34:15.866Z</updated>
+    <updated>2017-11-10T16:56:53.415Z</updated>
     
     <summary type="html">
     
@@ -142,7 +142,7 @@
     <link href="http://zbic.in/2016/11/05/NodeSchool-Lodz-6/"/>
     <id>http://zbic.in/2016/11/05/NodeSchool-Lodz-6/</id>
     <published>2016-11-05T00:00:00.000Z</published>
-    <updated>2017-10-20T21:46:26.208Z</updated>
+    <updated>2017-11-10T16:57:13.848Z</updated>
     
     <summary type="html">
     
@@ -165,7 +165,7 @@
     <link href="http://zbic.in/2016/09/04/Remembering-what-this-refers-to-the-A-B-C-D-method/"/>
     <id>http://zbic.in/2016/09/04/Remembering-what-this-refers-to-the-A-B-C-D-method/</id>
     <published>2016-09-04T00:00:00.000Z</published>
-    <updated>2017-10-20T21:38:08.090Z</updated>
+    <updated>2017-11-10T16:59:05.165Z</updated>
     
     <summary type="html">
     
@@ -240,7 +240,7 @@
     <link href="http://zbic.in/2015/10/17/Go-home-JS-you-re-drunk-1/"/>
     <id>http://zbic.in/2015/10/17/Go-home-JS-you-re-drunk-1/</id>
     <published>2015-10-17T00:00:00.000Z</published>
-    <updated>2017-10-20T21:41:35.009Z</updated>
+    <updated>2017-11-10T17:01:04.863Z</updated>
     
     <summary type="html">
     
