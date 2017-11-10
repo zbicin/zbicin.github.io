@@ -5,7 +5,7 @@ author: me
 
 # Hello and welcome to my blog!
 
-{% img about-photo https://avatars0.githubusercontent.com/u/1648189?s=460&v=4 200 Krzysztof Zbiciński - Author %}
+{% img about-photo /about/photo.jpg 200 Krzysztof Zbiciński - Author %}
 
 My name is Krzysztof and I'm a web developer, currently living in a beautiful city of Łódź, Poland. I am the organizer of [local NodeSchool workshops](https://nodeschool.io/lodz).
 
