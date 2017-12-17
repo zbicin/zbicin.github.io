@@ -2,9 +2,10 @@
 title: damnHandler - having fun with CSS in console
 tags:
   - JavaScript
-subtitle: Embedding a GIF image into a console.log output.
+subtitle: Embedding a GIF image into the console.log output.
 cover: cover.jpg
 date: 2017-12-12 20:01:18
+description: Embedding a GIF image into the console.log output.
 ---
 
 
