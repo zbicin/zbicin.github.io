@@ -20,9 +20,9 @@
 
     <!--Social Title-->
     
-        <meta property="og:title" content="Krzysztof Zbiciński - Blog"/>
-        <meta name="twitter:title" content="Krzysztof Zbiciński - Blog"/>   
-        <meta itemprop="name" content="Krzysztof Zbiciński - Blog"/>  
+        <meta property="og:title" content="damnHandler - having fun with CSS in console"/>
+        <meta name="twitter:title" content="damnHandler - having fun with CSS in console"/>      
+        <meta itemprop="name" content="damnHandler - having fun with CSS in console"/>  
     
 
     <!--Social Description-->
@@ -37,7 +37,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -51,7 +51,7 @@
 
     <!-- Title -->
     
-    <title>JavaScript - Krzysztof Zbiciński - Blog - Pragmatic web development</title>
+    <title>damnHandler - having fun with CSS in console - Krzysztof Zbiciński - Blog - Pragmatic web development</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -162,141 +162,103 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-color: #56534e; background-image: url('/img/home-bg.jpg')">
     <div class="backdrop" style="opacity: 0.5"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>#JavaScript</h1>
+                <div class="post-heading">
+                    <h1>damnHandler - having fun with CSS in console</h1>
+                    
+                    <h2 class="post-subheading">
+                        Embedding a GIF image into a console.log output.
+                    </h2>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                            Posted by Krzysztof Zbiciński
+                        
+                        
+                            on
+                            2017-12-12.
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2017/12/12/damnHandler-Fun-with-CSS-in-console-log/">
-        <h1 class="post-title archive">
-            damnHandler - having fun with CSS in console
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2017-12-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2017/11/01/Learn-JavaScript-not-frameworks/">
-        <h1 class="post-title archive">
-            Learn JavaScript, not frameworks
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2017-11-01
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2016/09/04/Remembering-what-this-refers-to-the-A-B-C-D-method/">
-        <h1 class="post-title archive">
-            Remembering what 'this' refers to - the A, B, C, D method
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2016-09-04
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2016/08/06/Using-Angular-1-x-Webpack-TypeScript-and-Karma-with-Coverage-together/">
-        <h1 class="post-title archive">
-            Using Angular 1.x, Webpack, TypeScript and Karma (with Coverage) together
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2016-08-06
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2015/10/17/Go-home-JS-you-re-drunk-1/">
-        <h1 class="post-title archive">
-            Go home JS, you're drunk
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2015-10-17
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2015/10/15/Parsing-URL-parameters-the-easy-way/">
-        <h1 class="post-title archive">
-            Parsing URL parameters - the easy way
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2015-10-15
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2015/09/21/Smooth-and-efficient-web-animations-do-s-and-don-ts/">
-        <h1 class="post-title archive">
-            Smooth and efficient web animations - do's and don'ts
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2015-09-21
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2015/08/01/OOP-in-AngularJS-within-minutes-1-Defining-a-class/">
-        <h1 class="post-title archive">
-            OOP in AngularJS within minutes - #1 Defining a class
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2015-08-01
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>Recently I wanted to check out the state of CSS implementation in <code>console.log</code> method. After few minutes of fiddling with the code I’ve came up with an error handler* that displays <a href="https://gph.is/QFXhvE" target="_blank" rel="external">a popular reaction GIF</a> from the <a href="http://www.imdb.com/title/tt0113118/" target="_blank" rel="external">Friday</a> movie:</p>
+<iframe src="https://gfycat.com/ifr/AdventurousWhisperedHorseshoebat" frameborder="0" scrolling="no" allowfullscreen width="640" height="302"></iframe>
+<h2 id="But-how-does-it-work"><a href="#But-how-does-it-work" class="headerlink" title="But, how does it work?"></a>But, how does it work?</h2><p>The code behind the <code>damnHandler</code> function was eventually something like this:</p>
+<script src="//gist.github.com/6125746c20d4d7d795fcdae42304c3a1.js"></script>
+<p>According to the spec, there are <a href="https://console.spec.whatwg.org/#formatting-specifiers" target="_blank" rel="external">plenty of formatters</a> that can be used to improve the look of <code>console.log</code>‘s output. One of them is <code>%c</code> which applies CSS styling to the given text. The formatter has to appear before the formatted text.</p>
+<p>So what we actually do is printing a 1px large dot, which uses <code>line-height</code> and <code>padding</code> properties in order to create a box with desired dimensions (the size of the image is 250px by 140px). We cannot simply use <code>height</code> and <code>width</code> altogether with <code>display: block</code> because these properties seem to be ignored. Eventually we set the <code>background</code> to point to the <a href="https://gph.is/QFXhvE" target="_blank" rel="external">GIF image hosted at Giphy</a>.</p>
+<p>Sadly it seems to work on Chrome only. Firefox, Internet Explorer 11 and Edge ignore the <code>background</code> property and interpret <code>line-height</code> and <code>padding</code> combination differently than Chrome while used in <code>console.log</code>.</p>
+<p><em> * Technically speaking, it’s not even a proper handler since it simply rethrows the error given. But you know, it’s <strong>for the science</strong>… ;) </em></p>
+<h2 id="Further-reading"><a href="#Further-reading" class="headerlink" title="Further reading"></a>Further reading</h2><ul>
+<li><a href="https://developers.google.com/web/tools/chrome-devtools/console/console-write#styling_console_output_with_css" target="_blank" rel="external">Styling console output with CSS at Google Developers</a></li>
 </ul>
+
+
+                <!-- Tags and categories -->
+                
+                    <p class="post-tags">
+                        
+                            Tags: 
+
+
+<a href="/tags/JavaScript/">#JavaScript</a>
+
+
+                        
+                    </p>
+                    <p class="post-categories">
+                        
+                    </p>
+                
+                
+                
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59db9b8d10126f1d"></script>
+
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    <div class="addthis_inline_share_toolbox"></div>
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+    <hr />
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+                </div>
+            
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
@@ -377,7 +339,7 @@
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
