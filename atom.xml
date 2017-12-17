@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zbic.in/"/>
-  <updated>2017-12-17T09:26:35.162Z</updated>
+  <updated>2017-12-17T09:36:27.775Z</updated>
   <id>http://zbic.in/</id>
   
   <author>
@@ -21,14 +21,11 @@
     <link href="http://zbic.in/2017/12/12/damnHandler-Fun-with-CSS-in-console-log/"/>
     <id>http://zbic.in/2017/12/12/damnHandler-Fun-with-CSS-in-console-log/</id>
     <published>2017-12-12T20:01:18.000Z</published>
-    <updated>2017-12-17T09:26:35.162Z</updated>
+    <updated>2017-12-17T09:36:27.775Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;Recently I wanted to check out the state of CSS implementation in &lt;code&gt;console.log&lt;/code&gt; method. After few minutes of fiddling with the
-      
+      Embedding a GIF image into the console.log output.
     
     </summary>
     
