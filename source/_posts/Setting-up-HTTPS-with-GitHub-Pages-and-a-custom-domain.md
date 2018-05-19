@@ -3,7 +3,7 @@ title: HTTPS, GitHub Pages and a custom domain
 subtitle: Quite surprisingly, setting it up wasn't so smooth.
 description: Quite surprisingly, setting it up wasn't so smooth.
 date: 2018-05-19 12:31:27
-#cover: cover.jpg
+cover: cover.jpg
 tags:
  - GitHub
  - SSL
@@ -46,3 +46,5 @@ example.com.   3600  IN  A 185.199.111.153
 6. Go back to GitHub and check "Enforce HTTPS for your domain" checkbox.
 
 There you go! :)
+
+{% unsplash p KGZ64yZYPuk "Warren Sammut" %}
