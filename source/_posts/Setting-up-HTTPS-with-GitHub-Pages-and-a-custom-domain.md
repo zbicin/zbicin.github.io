@@ -1,7 +1,7 @@
 ---
 title: HTTPS, GitHub Pages and a custom domain
-subtitle: Quite surprisingly, setting it up wasn't so trivial.
-description: Quite surprisingly, setting it up wasn't so trivial.
+subtitle: Quite surprisingly, setting it up wasn't so smooth.
+description: Quite surprisingly, setting it up wasn't so smooth.
 date: 2018-05-19 12:31:27
 #cover: cover.jpg
 tags:
