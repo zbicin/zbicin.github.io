@@ -42,9 +42,9 @@
 
     <!--Page Cover-->
     
-        <meta property="og:image" content="http://zbic.in/2018/05/19/Setting-up-HTTPS-with-GitHub-Pages-and-a-custom-domain/cover.jpg" />
-        <meta name="twitter:image:src" content="http://zbic.in/2018/05/19/Setting-up-HTTPS-with-GitHub-Pages-and-a-custom-domain/cover.jpg">
-        <meta itemprop="image" content="http://zbic.in/2018/05/19/Setting-up-HTTPS-with-GitHub-Pages-and-a-custom-domain/cover.jpg">     
+        <meta property="og:image" content="https://zbic.in/2018/05/19/Setting-up-HTTPS-with-GitHub-Pages-and-a-custom-domain/cover.jpg" />
+        <meta name="twitter:image:src" content="https://zbic.in/2018/05/19/Setting-up-HTTPS-with-GitHub-Pages-and-a-custom-domain/cover.jpg">
+        <meta itemprop="image" content="https://zbic.in/2018/05/19/Setting-up-HTTPS-with-GitHub-Pages-and-a-custom-domain/cover.jpg">     
     
 
         <meta name="twitter:card" content="summary_large_image">
@@ -207,42 +207,33 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p><a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> are cool. It's a very fast and free way to host your static pages, used not only by weekend hackers, but also by <a href="http://getbootstrap.com/" target="_blank" rel="noopener">Twitter Bootstrap</a>, <a href="https://electronjs.org/" target="_blank" rel="noopener">Electron</a> or... me, to host this blog. :)</p>
-<p>For a long time it struggled with a quite major problem in my opinion. It was not supporting HTTPS in combination with a custom domain. Untill your page was hosted under <code>USERNAME.github.io</code> everything was working fine. However when you wanted to give your page a more tailored and customized look you were faced with a dillema: either do not use HTTPS and get this scary, red lock in your browser's address bar, or use some <a href="https://medium.freecodecamp.org/an-illustrated-guide-for-setting-up-your-website-using-github-cloudflare-5a7a11ca9465" target="_blank" rel="noopener">tricks involving CloudFlare</a>.</p>
-<p>Eventually, in May 2018 GitHub added this lacking functionality and <a href="https://blog.github.com/2018-05-01-github-pages-custom-domains-https/" target="_blank" rel="noopener">pages with a custom domain can be served over HTTPS</a>. Being a long time user of a custom domain, I felt a slight relief, because I really considered changing to another hosting provider for this reason.</p>
+                <p><a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> are cool. It’s a very fast and free way to host your static pages, used not only by weekend hackers, but also by <a href="http://getbootstrap.com/" target="_blank" rel="noopener">Twitter Bootstrap</a>, <a href="https://electronjs.org/" target="_blank" rel="noopener">Electron</a> or… me, to host this blog. :)</p>
+<p>For a long time it struggled with a quite major problem in my opinion. It was not supporting HTTPS in combination with a custom domain. Untill your page was hosted under <code>USERNAME.github.io</code> everything was working fine. However when you wanted to give your page a more tailored and customized look you were faced with a dillema: either do not use HTTPS and get this scary, red lock in your browser’s address bar, or use some <a href="https://medium.freecodecamp.org/an-illustrated-guide-for-setting-up-your-website-using-github-cloudflare-5a7a11ca9465" target="_blank" rel="noopener">tricks involving CloudFlare</a>.</p>
+<p>Eventually, in May 2018 GitHub added this lacking functionality and <a href="https://blog.github.com/2018-05-01-github-pages-custom-domains-https/" target="_blank" rel="noopener">pages with a custom domain can be served over HTTPS</a>. Being a long time user of a custom domain, I felt a slight relief, because I really considered changing to another hosting provider for this reason. </p>
 <p>Quite surprisinlgy, the process of turning on HTTPS was not so smooth, so I decided to write it down for future reference.</p>
-<h2>Step by step guide</h2>
-<p>Here is a step by step guide how to turn on HTTPS in GitHub Pages with a custom domain hosted in OVH. Please, read the points carefully and do not omit any of them. The guide assumes that you are already using a custom domain with GitHub Pages over HTTP.</p>
+<h2 id="Step-by-step-guide"><a href="#Step-by-step-guide" class="headerlink" title="Step by step guide"></a>Step by step guide</h2><p>Here is a step by step guide how to turn on HTTPS in GitHub Pages with a custom domain hosted in OVH. Please, read the points carefully and do not omit any of them. The guide assumes that you are already using a custom domain with GitHub Pages over HTTP.</p>
 <ol>
-<li>
-<p>In your OVH Web Control Panel, go to the <em>Domains</em> section, select your domain, and open the <em>Redirection</em> tab. <a href="https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider" target="_blank" rel="noopener">Create four, A-type records</a> that point to:</p>
-<ul>
+<li>In your OVH Web Control Panel, go to the <em>Domains</em> section, select your domain, and open the <em>Redirection</em> tab. <a href="https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider" target="_blank" rel="noopener">Create four, A-type records</a> that point to:<ul>
 <li>185.199.108.153,</li>
 <li>185.199.109.153,</li>
 <li>185.199.110.153,</li>
-<li>185.199.111.153.
-<img src="/2018/05/19/Setting-up-HTTPS-with-GitHub-Pages-and-a-custom-domain/ovh.png" class="center" title="Correctly setup A-type records in the OVH panel."></li>
+<li>185.199.111.153.<img src="/2018/05/19/Setting-up-HTTPS-with-GitHub-Pages-and-a-custom-domain/ovh.png" class="center" title="Correctly setup A-type records in the OVH panel."></li>
 </ul>
 </li>
-<li>
-<p>Check if your DNS record is set up correctly by launching <code>dig +noall +answer example.com</code> in terminal:
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dig +noall +answer example.com</span><br><span class="line">;example.com.</span><br><span class="line">example.com.   3600  IN  A 185.199.108.153</span><br><span class="line">example.com.   3600  IN  A 185.199.109.153</span><br><span class="line">example.com.   3600  IN  A 185.199.110.153</span><br><span class="line">example.com.   3600  IN  A 185.199.111.153</span><br></pre></td></tr></table></figure></p>
+<li><p>Check if your DNS record is set up correctly by launching <code>dig +noall +answer example.com</code> in terminal:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dig +noall +answer example.com</span><br><span class="line">;example.com.</span><br><span class="line">example.com.   3600  IN  A 185.199.108.153</span><br><span class="line">example.com.   3600  IN  A 185.199.109.153</span><br><span class="line">example.com.   3600  IN  A 185.199.110.153</span><br><span class="line">example.com.   3600  IN  A 185.199.111.153</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>Remove custom domain from GitHub settings so it falls back to <code>USERNAME.github.io</code>. This is crucial.</p>
+<li><p>Remove custom domain from GitHub settings so it falls back to <code>USERNAME.github.io</code>. This is crucial.</p>
 </li>
-<li>
-<p>Add the custom domain again. It seems to trigger some inner GitHub procedures that makes it aware of new configuration.</p>
+<li><p>Add the custom domain again. It seems to trigger some inner GitHub procedures that makes it aware of new configuration.</p>
 </li>
-<li>
-<p>Check, if you can reach your page with the added custom domain over the HTTPS. It should work fine now.</p>
+<li><p>Check, if you can reach your page with the added custom domain over the HTTPS. It should work fine now.</p>
 </li>
-<li>
-<p>Go back to GitHub and check &quot;Enforce HTTPS for your domain&quot; checkbox.</p>
+<li><p>Go back to GitHub and check “Enforce HTTPS for your domain” checkbox.</p>
 </li>
 </ol>
 <p>There you go! :)</p>
-<p></p><p class="unsplash-credit">Photo by <a href="https://unsplash.com/photos/KGZ64yZYPuk" target="_blank">Warren Sammut</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</p><p></p>
+<p class="unsplash-credit">Photo by <a href="https://unsplash.com/photos/KGZ64yZYPuk" target="_blank">Warren Sammut</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</p>
 
 
                 <!-- Tags and categories -->

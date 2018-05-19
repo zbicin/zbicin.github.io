@@ -5,9 +5,9 @@
   <subtitle>Pragmatic web development</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://zbic.in/"/>
+  <link href="https://zbic.in/"/>
   <updated>2018-05-19T11:34:12.634Z</updated>
-  <id>http://zbic.in/</id>
+  <id>https://zbic.in/</id>
   
   <author>
     <name>Krzysztof Zbiciński</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>HTTPS, GitHub Pages and a custom domain</title>
-    <link href="http://zbic.in/2018/05/19/Setting-up-HTTPS-with-GitHub-Pages-and-a-custom-domain/"/>
-    <id>http://zbic.in/2018/05/19/Setting-up-HTTPS-with-GitHub-Pages-and-a-custom-domain/</id>
+    <link href="https://zbic.in/2018/05/19/Setting-up-HTTPS-with-GitHub-Pages-and-a-custom-domain/"/>
+    <id>https://zbic.in/2018/05/19/Setting-up-HTTPS-with-GitHub-Pages-and-a-custom-domain/</id>
     <published>2018-05-19T12:31:27.000Z</published>
     <updated>2018-05-19T11:34:12.634Z</updated>
     
@@ -30,18 +30,18 @@
     </summary>
     
     
-      <category term="GitHub" scheme="http://zbic.in/tags/GitHub/"/>
+      <category term="GitHub" scheme="https://zbic.in/tags/GitHub/"/>
     
-      <category term="SSL" scheme="http://zbic.in/tags/SSL/"/>
+      <category term="SSL" scheme="https://zbic.in/tags/SSL/"/>
     
-      <category term="OVH" scheme="http://zbic.in/tags/OVH/"/>
+      <category term="OVH" scheme="https://zbic.in/tags/OVH/"/>
     
   </entry>
   
   <entry>
     <title>Having fun with CSS in console</title>
-    <link href="http://zbic.in/2017/12/12/damnHandler-Fun-with-CSS-in-console-log/"/>
-    <id>http://zbic.in/2017/12/12/damnHandler-Fun-with-CSS-in-console-log/</id>
+    <link href="https://zbic.in/2017/12/12/damnHandler-Fun-with-CSS-in-console-log/"/>
+    <id>https://zbic.in/2017/12/12/damnHandler-Fun-with-CSS-in-console-log/</id>
     <published>2017-12-12T20:01:18.000Z</published>
     <updated>2018-05-19T10:20:47.007Z</updated>
     
@@ -52,14 +52,14 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="http://zbic.in/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://zbic.in/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>Learn JavaScript, not frameworks</title>
-    <link href="http://zbic.in/2017/11/01/Learn-JavaScript-not-frameworks/"/>
-    <id>http://zbic.in/2017/11/01/Learn-JavaScript-not-frameworks/</id>
+    <link href="https://zbic.in/2017/11/01/Learn-JavaScript-not-frameworks/"/>
+    <id>https://zbic.in/2017/11/01/Learn-JavaScript-not-frameworks/</id>
     <published>2017-11-01T16:30:48.000Z</published>
     <updated>2017-11-10T16:43:53.230Z</updated>
     
@@ -70,14 +70,14 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="http://zbic.in/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://zbic.in/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>NodeSchool Lodz #8</title>
-    <link href="http://zbic.in/2017/10/20/NodeSchool-Lodz-8/"/>
-    <id>http://zbic.in/2017/10/20/NodeSchool-Lodz-8/</id>
+    <link href="https://zbic.in/2017/10/20/NodeSchool-Lodz-8/"/>
+    <id>https://zbic.in/2017/10/20/NodeSchool-Lodz-8/</id>
     <published>2017-10-20T20:01:18.000Z</published>
     <updated>2017-11-10T16:47:22.189Z</updated>
     
@@ -88,16 +88,16 @@
     </summary>
     
     
-      <category term="NodeSchool" scheme="http://zbic.in/tags/NodeSchool/"/>
+      <category term="NodeSchool" scheme="https://zbic.in/tags/NodeSchool/"/>
     
-      <category term="Node.js" scheme="http://zbic.in/tags/Node-js/"/>
+      <category term="Node.js" scheme="https://zbic.in/tags/Node-js/"/>
     
   </entry>
   
   <entry>
     <title>Debugging Cordova applications</title>
-    <link href="http://zbic.in/2017/10/08/Debugging-Cordova-applications/"/>
-    <id>http://zbic.in/2017/10/08/Debugging-Cordova-applications/</id>
+    <link href="https://zbic.in/2017/10/08/Debugging-Cordova-applications/"/>
+    <id>https://zbic.in/2017/10/08/Debugging-Cordova-applications/</id>
     <published>2017-10-08T17:14:11.000Z</published>
     <updated>2017-11-10T16:49:22.117Z</updated>
     
@@ -108,18 +108,18 @@
     </summary>
     
     
-      <category term="Apache Cordova" scheme="http://zbic.in/tags/Apache-Cordova/"/>
+      <category term="Apache Cordova" scheme="https://zbic.in/tags/Apache-Cordova/"/>
     
-      <category term="Adobe PhoneGap" scheme="http://zbic.in/tags/Adobe-PhoneGap/"/>
+      <category term="Adobe PhoneGap" scheme="https://zbic.in/tags/Adobe-PhoneGap/"/>
     
-      <category term="Android" scheme="http://zbic.in/tags/Android/"/>
+      <category term="Android" scheme="https://zbic.in/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>ngh - you want to know this command</title>
-    <link href="http://zbic.in/2017/04/16/ngh-you-want-to-know-this-command/"/>
-    <id>http://zbic.in/2017/04/16/ngh-you-want-to-know-this-command/</id>
+    <link href="https://zbic.in/2017/04/16/ngh-you-want-to-know-this-command/"/>
+    <id>https://zbic.in/2017/04/16/ngh-you-want-to-know-this-command/</id>
     <published>2017-04-16T00:00:00.000Z</published>
     <updated>2017-11-10T16:52:48.276Z</updated>
     
@@ -133,14 +133,14 @@
     </summary>
     
     
-      <category term="Angular" scheme="http://zbic.in/tags/Angular/"/>
+      <category term="Angular" scheme="https://zbic.in/tags/Angular/"/>
     
   </entry>
   
   <entry>
     <title>The concept of an &#39;idea bag&#39;</title>
-    <link href="http://zbic.in/2017/04/03/The-concept-of-an-idea-bag/"/>
-    <id>http://zbic.in/2017/04/03/The-concept-of-an-idea-bag/</id>
+    <link href="https://zbic.in/2017/04/03/The-concept-of-an-idea-bag/"/>
+    <id>https://zbic.in/2017/04/03/The-concept-of-an-idea-bag/</id>
     <published>2017-04-03T00:00:00.000Z</published>
     <updated>2017-11-10T16:55:37.151Z</updated>
     
@@ -151,14 +151,14 @@
     </summary>
     
     
-      <category term="Other" scheme="http://zbic.in/tags/Other/"/>
+      <category term="Other" scheme="https://zbic.in/tags/Other/"/>
     
   </entry>
   
   <entry>
     <title>Music Driven Development</title>
-    <link href="http://zbic.in/2017/03/14/Music-Driven-Development/"/>
-    <id>http://zbic.in/2017/03/14/Music-Driven-Development/</id>
+    <link href="https://zbic.in/2017/03/14/Music-Driven-Development/"/>
+    <id>https://zbic.in/2017/03/14/Music-Driven-Development/</id>
     <published>2017-03-14T00:00:00.000Z</published>
     <updated>2017-11-10T16:56:53.415Z</updated>
     
@@ -167,21 +167,20 @@
       
       
         &lt;p&gt;Back in the days, I tweeted few words about staying focused:&lt;/p&gt;
-&lt;p&gt;&amp;lt;center&amp;gt;
-&amp;lt;blockquote class=&amp;quot;twitter-tweet&amp;quot; data-ca
+&lt;center&gt;&lt;br&gt;&lt;blockquote class=&quot;twitter-tweet&quot; data-cards=&quot;hidden&quot; data-l
       
     
     </summary>
     
     
-      <category term="Other" scheme="http://zbic.in/tags/Other/"/>
+      <category term="Other" scheme="https://zbic.in/tags/Other/"/>
     
   </entry>
   
   <entry>
     <title>NodeSchool Lodz #6</title>
-    <link href="http://zbic.in/2016/11/05/NodeSchool-Lodz-6/"/>
-    <id>http://zbic.in/2016/11/05/NodeSchool-Lodz-6/</id>
+    <link href="https://zbic.in/2016/11/05/NodeSchool-Lodz-6/"/>
+    <id>https://zbic.in/2016/11/05/NodeSchool-Lodz-6/</id>
     <published>2016-11-05T00:00:00.000Z</published>
     <updated>2017-11-10T16:57:13.848Z</updated>
     
@@ -189,22 +188,22 @@
     
       
       
-        &lt;p&gt;The 6th edition of NodeSchool workshops in Łódź is history now. The main topic of the meeting was &#39;ES6 and beyond&#39;. During the event ther
+        &lt;p&gt;The 6th edition of NodeSchool workshops in Łódź is history now. The main topic of the meeting was ‘ES6 and beyond’. During the event ther
       
     
     </summary>
     
     
-      <category term="NodeSchool" scheme="http://zbic.in/tags/NodeSchool/"/>
+      <category term="NodeSchool" scheme="https://zbic.in/tags/NodeSchool/"/>
     
-      <category term="Node.js" scheme="http://zbic.in/tags/Node-js/"/>
+      <category term="Node.js" scheme="https://zbic.in/tags/Node-js/"/>
     
   </entry>
   
   <entry>
     <title>Remembering what &#39;this&#39; refers to - the A, B, C, D method</title>
-    <link href="http://zbic.in/2016/09/04/Remembering-what-this-refers-to-the-A-B-C-D-method/"/>
-    <id>http://zbic.in/2016/09/04/Remembering-what-this-refers-to-the-A-B-C-D-method/</id>
+    <link href="https://zbic.in/2016/09/04/Remembering-what-this-refers-to-the-A-B-C-D-method/"/>
+    <id>https://zbic.in/2016/09/04/Remembering-what-this-refers-to-the-A-B-C-D-method/</id>
     <published>2016-09-04T00:00:00.000Z</published>
     <updated>2017-11-10T16:59:05.165Z</updated>
     
@@ -218,14 +217,14 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="http://zbic.in/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://zbic.in/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>Using Angular 1.x, Webpack, TypeScript and Karma (with Coverage) together</title>
-    <link href="http://zbic.in/2016/08/06/Using-Angular-1-x-Webpack-TypeScript-and-Karma-with-Coverage-together/"/>
-    <id>http://zbic.in/2016/08/06/Using-Angular-1-x-Webpack-TypeScript-and-Karma-with-Coverage-together/</id>
+    <link href="https://zbic.in/2016/08/06/Using-Angular-1-x-Webpack-TypeScript-and-Karma-with-Coverage-together/"/>
+    <id>https://zbic.in/2016/08/06/Using-Angular-1-x-Webpack-TypeScript-and-Karma-with-Coverage-together/</id>
     <published>2016-08-06T00:00:00.000Z</published>
     <updated>2017-10-20T21:58:47.615Z</updated>
     
@@ -233,30 +232,30 @@
     
       
       
-        &lt;p&gt;Putting all of these toghether was apparently a non-trivial task, so I decided to setup a simple project for a future reference. I&#39;m quit
+        &lt;p&gt;Putting all of these toghether was apparently a non-trivial task, so I decided to setup a simple project for a future reference. I’m quit
       
     
     </summary>
     
     
-      <category term="JavaScript" scheme="http://zbic.in/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://zbic.in/tags/JavaScript/"/>
     
-      <category term="Angular" scheme="http://zbic.in/tags/Angular/"/>
+      <category term="Angular" scheme="https://zbic.in/tags/Angular/"/>
     
-      <category term="Webpack" scheme="http://zbic.in/tags/Webpack/"/>
+      <category term="Webpack" scheme="https://zbic.in/tags/Webpack/"/>
     
-      <category term="TypeScript" scheme="http://zbic.in/tags/TypeScript/"/>
+      <category term="TypeScript" scheme="https://zbic.in/tags/TypeScript/"/>
     
-      <category term="Karma" scheme="http://zbic.in/tags/Karma/"/>
+      <category term="Karma" scheme="https://zbic.in/tags/Karma/"/>
     
-      <category term="Karma Coverage" scheme="http://zbic.in/tags/Karma-Coverage/"/>
+      <category term="Karma Coverage" scheme="https://zbic.in/tags/Karma-Coverage/"/>
     
   </entry>
   
   <entry>
     <title>JIRA Tempo Timesheets Notifier</title>
-    <link href="http://zbic.in/2015/12/14/JIRA-Tempo-Timesheets-Notifier/"/>
-    <id>http://zbic.in/2015/12/14/JIRA-Tempo-Timesheets-Notifier/</id>
+    <link href="https://zbic.in/2015/12/14/JIRA-Tempo-Timesheets-Notifier/"/>
+    <id>https://zbic.in/2015/12/14/JIRA-Tempo-Timesheets-Notifier/</id>
     <published>2015-12-14T00:00:00.000Z</published>
     <updated>2017-10-09T16:59:35.631Z</updated>
     
@@ -264,22 +263,22 @@
     
       
       
-        &lt;p&gt;I&#39;ve made a UserScript that periodically displays currently tracked issue in JIRA Tempo Timesheets using HTML5 Notification API. It was a
+        &lt;p&gt;I’ve made a UserScript that periodically displays currently tracked issue in JIRA Tempo Timesheets using HTML5 Notification API. It was a
       
     
     </summary>
     
     
-      <category term="JIRA" scheme="http://zbic.in/tags/JIRA/"/>
+      <category term="JIRA" scheme="https://zbic.in/tags/JIRA/"/>
     
-      <category term="UserScript" scheme="http://zbic.in/tags/UserScript/"/>
+      <category term="UserScript" scheme="https://zbic.in/tags/UserScript/"/>
     
   </entry>
   
   <entry>
     <title>Go home JS, you&#39;re drunk</title>
-    <link href="http://zbic.in/2015/10/17/Go-home-JS-you-re-drunk-1/"/>
-    <id>http://zbic.in/2015/10/17/Go-home-JS-you-re-drunk-1/</id>
+    <link href="https://zbic.in/2015/10/17/Go-home-JS-you-re-drunk-1/"/>
+    <id>https://zbic.in/2015/10/17/Go-home-JS-you-re-drunk-1/</id>
     <published>2015-10-17T00:00:00.000Z</published>
     <updated>2017-11-10T17:01:04.863Z</updated>
     
@@ -288,20 +287,20 @@
       
       
         &lt;p&gt;What would be the result of the following code:&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span clas
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;
       
     
     </summary>
     
     
-      <category term="JavaScript" scheme="http://zbic.in/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://zbic.in/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>Parsing URL parameters - the easy way</title>
-    <link href="http://zbic.in/2015/10/15/Parsing-URL-parameters-the-easy-way/"/>
-    <id>http://zbic.in/2015/10/15/Parsing-URL-parameters-the-easy-way/</id>
+    <link href="https://zbic.in/2015/10/15/Parsing-URL-parameters-the-easy-way/"/>
+    <id>https://zbic.in/2015/10/15/Parsing-URL-parameters-the-easy-way/</id>
     <published>2015-10-15T00:00:00.000Z</published>
     <updated>2017-10-09T16:59:35.631Z</updated>
     
@@ -309,22 +308,22 @@
     
       
       
-        &lt;p&gt;I can&#39;t believe that I couldn&#39;t find a jQuery plugin or a vanilla-JS snippet that would parse the URL parameters infallibly. All of the s
+        &lt;p&gt;I can’t believe that I couldn’t find a jQuery plugin or a vanilla-JS snippet that would parse the URL parameters infallibly. All of the s
       
     
     </summary>
     
     
-      <category term="JavaScript" scheme="http://zbic.in/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://zbic.in/tags/JavaScript/"/>
     
-      <category term="Gist" scheme="http://zbic.in/tags/Gist/"/>
+      <category term="Gist" scheme="https://zbic.in/tags/Gist/"/>
     
   </entry>
   
   <entry>
     <title>Smooth and efficient web animations - do&#39;s and don&#39;ts</title>
-    <link href="http://zbic.in/2015/09/21/Smooth-and-efficient-web-animations-do-s-and-don-ts/"/>
-    <id>http://zbic.in/2015/09/21/Smooth-and-efficient-web-animations-do-s-and-don-ts/</id>
+    <link href="https://zbic.in/2015/09/21/Smooth-and-efficient-web-animations-do-s-and-don-ts/"/>
+    <id>https://zbic.in/2015/09/21/Smooth-and-efficient-web-animations-do-s-and-don-ts/</id>
     <published>2015-09-21T00:00:00.000Z</published>
     <updated>2017-10-09T16:59:35.635Z</updated>
     
@@ -338,16 +337,16 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="http://zbic.in/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://zbic.in/tags/JavaScript/"/>
     
-      <category term="CSS" scheme="http://zbic.in/tags/CSS/"/>
+      <category term="CSS" scheme="https://zbic.in/tags/CSS/"/>
     
   </entry>
   
   <entry>
     <title>Bootstrap and AngularJS sandbox to start prototyping within seconds</title>
-    <link href="http://zbic.in/2015/08/13/Bootstrap-and-AngularJS-sandbox-to-start-prototyping-within-seconds/"/>
-    <id>http://zbic.in/2015/08/13/Bootstrap-and-AngularJS-sandbox-to-start-prototyping-within-seconds/</id>
+    <link href="https://zbic.in/2015/08/13/Bootstrap-and-AngularJS-sandbox-to-start-prototyping-within-seconds/"/>
+    <id>https://zbic.in/2015/08/13/Bootstrap-and-AngularJS-sandbox-to-start-prototyping-within-seconds/</id>
     <published>2015-08-13T00:00:00.000Z</published>
     <updated>2017-10-09T16:59:35.623Z</updated>
     
@@ -361,16 +360,16 @@
     </summary>
     
     
-      <category term="AngularJS" scheme="http://zbic.in/tags/AngularJS/"/>
+      <category term="AngularJS" scheme="https://zbic.in/tags/AngularJS/"/>
     
-      <category term="Bootstrap" scheme="http://zbic.in/tags/Bootstrap/"/>
+      <category term="Bootstrap" scheme="https://zbic.in/tags/Bootstrap/"/>
     
   </entry>
   
   <entry>
     <title>OOP in AngularJS within minutes - #1 Defining a class</title>
-    <link href="http://zbic.in/2015/08/01/OOP-in-AngularJS-within-minutes-1-Defining-a-class/"/>
-    <id>http://zbic.in/2015/08/01/OOP-in-AngularJS-within-minutes-1-Defining-a-class/</id>
+    <link href="https://zbic.in/2015/08/01/OOP-in-AngularJS-within-minutes-1-Defining-a-class/"/>
+    <id>https://zbic.in/2015/08/01/OOP-in-AngularJS-within-minutes-1-Defining-a-class/</id>
     <published>2015-08-01T00:00:00.000Z</published>
     <updated>2017-10-09T16:59:35.631Z</updated>
     
@@ -384,16 +383,16 @@
     </summary>
     
     
-      <category term="AngularJS" scheme="http://zbic.in/tags/AngularJS/"/>
+      <category term="AngularJS" scheme="https://zbic.in/tags/AngularJS/"/>
     
-      <category term="JavaScript" scheme="http://zbic.in/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://zbic.in/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>Long variable names and their benefits during debugging</title>
-    <link href="http://zbic.in/2015/07/11/Long-variable-names-and-their-benefits-during-debugging/"/>
-    <id>http://zbic.in/2015/07/11/Long-variable-names-and-their-benefits-during-debugging/</id>
+    <link href="https://zbic.in/2015/07/11/Long-variable-names-and-their-benefits-during-debugging/"/>
+    <id>https://zbic.in/2015/07/11/Long-variable-names-and-their-benefits-during-debugging/</id>
     <published>2015-07-11T00:00:00.000Z</published>
     <updated>2017-10-09T16:59:35.631Z</updated>
     
@@ -407,7 +406,7 @@
     </summary>
     
     
-      <category term="Other" scheme="http://zbic.in/tags/Other/"/>
+      <category term="Other" scheme="https://zbic.in/tags/Other/"/>
     
   </entry>
   
