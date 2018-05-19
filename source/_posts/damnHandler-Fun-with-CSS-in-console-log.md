@@ -1,5 +1,5 @@
 ---
-title: damnHandler - having fun with CSS in console
+title: Having fun with CSS in console
 tags:
   - JavaScript
 subtitle: Embedding a GIF image into the console.log output.
