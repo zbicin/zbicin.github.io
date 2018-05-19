@@ -10,7 +10,7 @@
 
     <!--Description-->
     
-        <meta name="description" content="Pragmatic web development">
+        <meta name="description" content="Quite surprisingly, setting it up wasn&#39;t so trivial.">
     
 
     <!--Author-->
@@ -20,16 +20,16 @@
 
     <!--Social Title-->
     
-        <meta property="og:title" content="Krzysztof Zbiciński - Blog"/>
-        <meta name="twitter:title" content="Krzysztof Zbiciński - Blog"/>   
-        <meta itemprop="name" content="Krzysztof Zbiciński - Blog"/>  
+        <meta property="og:title" content="HTTPS, GitHub Pages and a custom domain"/>
+        <meta name="twitter:title" content="HTTPS, GitHub Pages and a custom domain"/>      
+        <meta itemprop="name" content="HTTPS, GitHub Pages and a custom domain"/>  
     
 
     <!--Social Description-->
     
-        <meta property="og:description" content="Pragmatic web development" />
-        <meta name="twitter:description" content="Pragmatic web development" />   
-        <meta itemprop="description" content="Pragmatic web development" />             
+        <meta property="og:description" content="Quite surprisingly, setting it up wasn&#39;t so trivial." />
+        <meta name="twitter:description" content="Quite surprisingly, setting it up wasn&#39;t so trivial." />       
+        <meta itemprop="description" content="Quite surprisingly, setting it up wasn&#39;t so trivial." />        
     
 
     <!--Open Graph Site Name-->
@@ -37,7 +37,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -51,7 +51,7 @@
 
     <!-- Title -->
     
-    <title>Archives: 2017/10 - Krzysztof Zbiciński - Blog - Pragmatic web development</title>
+    <title>HTTPS, GitHub Pages and a custom domain - Krzysztof Zbiciński - Blog - Pragmatic web development</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -162,63 +162,118 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-color: #56534e; background-image: url('/img/home-bg.jpg')">
     <div class="backdrop" style="opacity: 0.5"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2017/10</h1>
+                <div class="post-heading">
+                    <h1>HTTPS, GitHub Pages and a custom domain</h1>
+                    
+                    <h2 class="post-subheading">
+                        Quite surprisingly, setting it up wasn't so trivial.
+                    </h2>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                            Posted by Krzysztof Zbiciński
+                        
+                        
+                            on
+                            2018-05-19.
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2017/10/20/NodeSchool-Lodz-8/">
-        <h1 class="post-title archive">
-            NodeSchool Lodz #8
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2017-10-20
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2017/10/08/Debugging-Cordova-applications/">
-        <h1 class="post-title archive">
-            Debugging Cordova applications
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2017-10-08
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p><a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> are cool. It’s a very fast and free way to host your static pages, used not only by weekend hackers, but also by <a href="http://getbootstrap.com/" target="_blank" rel="noopener">Twitter Bootstrap</a>, <a href="https://electronjs.org/" target="_blank" rel="noopener">Electron</a> or… me, to host this blog. :)</p>
+<p>For a long time it struggled with a quite major problem in my opinion. It was not supporting HTTPS in combination with a custom domain. Untill your page was hosted under <code>USERNAME.github.io</code> everything was working fine. However when you wanted to give your page a more tailored and customized look you were faced with a dillema: either do not use HTTPS and get this scary, red lock in your browser’s address bar, or use some <a href="https://medium.freecodecamp.org/an-illustrated-guide-for-setting-up-your-website-using-github-cloudflare-5a7a11ca9465" target="_blank" rel="noopener">tricks involving CloudFlare</a>.</p>
+<p>Eventually, in May 2018 GitHub added this lacking functionality and <a href="https://blog.github.com/2018-05-01-github-pages-custom-domains-https/" target="_blank" rel="noopener">pages with a custom domain can be served over HTTPS</a>. Being a long time user of a custom domain, I felt a slight relief, because I really considered changing to another hosting provider for this reason. </p>
+<p>Quite surprisinlgy, the process of turning on HTTPS was not so smooth, so I decided to write it down for future reference.</p>
+<h2 id="Step-by-step-guide"><a href="#Step-by-step-guide" class="headerlink" title="Step by step guide"></a>Step by step guide</h2><p>Here is a step by step guide how to turn on HTTPS in GitHub Pages with a custom domain hosted in OVH. Please, read the points carefully and do not omit any of them. The guide assumes that you are already using a custom domain with GitHub Pages over HTTP.</p>
+<ol>
+<li>In your OVH Web Control Panel, go to the <em>Domains</em> section, select your domain, and open the <em>Redirection</em> tab. <a href="https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider" target="_blank" rel="noopener">Create four, A-type records</a> that point to:<ul>
+<li>185.199.108.153,</li>
+<li>185.199.109.153,</li>
+<li>185.199.110.153,</li>
+<li>185.199.111.153.<img src="/2018/05/19/Setting-up-HTTPS-with-GitHub-Pages-and-a-custom-domain/ovh.png" class="center" title="Correctly setup A-type records in the OVH panel."></li>
 </ul>
+</li>
+<li><p>Check if your DNS record is set up correctly by launching <code>dig +noall +answer example.com</code> in terminal:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dig +noall +answer example.com</span><br><span class="line">;example.com.</span><br><span class="line">example.com.   3600  IN  A 185.199.108.153</span><br><span class="line">example.com.   3600  IN  A 185.199.109.153</span><br><span class="line">example.com.   3600  IN  A 185.199.110.153</span><br><span class="line">example.com.   3600  IN  A 185.199.111.153</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Remove custom domain from GitHub settings so it falls back to <code>USERNAME.github.io</code>. This is crucial.</p>
+</li>
+<li><p>Add the custom domain again. It seems to trigger some inner GitHub procedures that makes it aware of new configuration.</p>
+</li>
+<li><p>Check, if you can reach your page with the added custom domain over the HTTPS. It should work fine now.</p>
+</li>
+<li><p>Go back to GitHub and check “Enforce HTTPS for your domain” checkbox.</p>
+</li>
+</ol>
+<p>There you go! :)</p>
+
+
+                <!-- Tags and categories -->
+                
+                    <p class="post-tags">
+                        
+                            Tags: 
+
+
+<a href="/tags/GitHub/">#GitHub</a> <a href="/tags/SSL/">#SSL</a> <a href="/tags/OVH/">#OVH</a>
+
+
+                        
+                    </p>
+                    <p class="post-categories">
+                        
+                    </p>
+                
+                
+                
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59db9b8d10126f1d"></script>
+
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    <div class="addthis_inline_share_toolbox"></div>
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+    <hr />
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+                </div>
+            
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
@@ -299,7 +354,7 @@
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>

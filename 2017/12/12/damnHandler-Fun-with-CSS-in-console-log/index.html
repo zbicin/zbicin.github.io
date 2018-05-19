@@ -20,9 +20,9 @@
 
     <!--Social Title-->
     
-        <meta property="og:title" content="damnHandler - having fun with CSS in console"/>
-        <meta name="twitter:title" content="damnHandler - having fun with CSS in console"/>      
-        <meta itemprop="name" content="damnHandler - having fun with CSS in console"/>  
+        <meta property="og:title" content="Having fun with CSS in console"/>
+        <meta name="twitter:title" content="Having fun with CSS in console"/>      
+        <meta itemprop="name" content="Having fun with CSS in console"/>  
     
 
     <!--Social Description-->
@@ -55,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>damnHandler - having fun with CSS in console - Krzysztof Zbiciński - Blog - Pragmatic web development</title>
+    <title>Having fun with CSS in console - Krzysztof Zbiciński - Blog - Pragmatic web development</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -175,7 +175,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>damnHandler - having fun with CSS in console</h1>
+                    <h1>Having fun with CSS in console</h1>
                     
                     <h2 class="post-subheading">
                         Embedding a GIF image into the console.log output.
@@ -207,17 +207,17 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>Recently I wanted to check out the state of CSS implementation in <code>console.log</code> method. After few minutes of fiddling with the code I’ve came up with an error handler* that displays <a href="https://gph.is/QFXhvE" target="_blank" rel="external">a popular reaction GIF</a> from the <a href="http://www.imdb.com/title/tt0113118/" target="_blank" rel="external">Friday</a> movie:</p>
+                <p>Recently I wanted to check out the state of CSS implementation in <code>console.log</code> method. After few minutes of fiddling with the code I’ve came up with an error handler* that displays <a href="https://gph.is/QFXhvE" target="_blank" rel="noopener">a popular reaction GIF</a> from the <a href="http://www.imdb.com/title/tt0113118/" target="_blank" rel="noopener">Friday</a> movie:</p>
 <iframe src="https://gfycat.com/ifr/AdventurousWhisperedHorseshoebat" frameborder="0" scrolling="no" allowfullscreen width="640" height="302"></iframe>
 <h2 id="But-how-does-it-work"><a href="#But-how-does-it-work" class="headerlink" title="But, how does it work?"></a>But, how does it work?</h2><p>The code behind the <code>damnHandler</code> function was eventually something like this:</p>
 <script src="//gist.github.com/6125746c20d4d7d795fcdae42304c3a1.js"></script>
-<p>According to the spec, there are <a href="https://console.spec.whatwg.org/#formatting-specifiers" target="_blank" rel="external">plenty of formatters</a> that can be used to improve the look of <code>console.log</code>‘s output. One of them is <code>%c</code> which applies CSS styling to the given text. The formatter has to appear before the formatted text.</p>
-<p>So what we actually do is printing a 1px large dot, which uses <code>line-height</code> and <code>padding</code> properties in order to create a box with desired dimensions (the size of the image is 250px by 140px). We cannot simply use <code>height</code> and <code>width</code> altogether with <code>display: block</code> because these properties seem to be ignored. Eventually we set the <code>background</code> to point to the <a href="https://gph.is/QFXhvE" target="_blank" rel="external">GIF image hosted at Giphy</a>.</p>
+<p>According to the spec, there are <a href="https://console.spec.whatwg.org/#formatting-specifiers" target="_blank" rel="noopener">plenty of formatters</a> that can be used to improve the look of <code>console.log</code>‘s output. One of them is <code>%c</code> which applies CSS styling to the given text. The formatter has to appear before the formatted text.</p>
+<p>So what we actually do is printing a 1px large dot, which uses <code>line-height</code> and <code>padding</code> properties in order to create a box with desired dimensions (the size of the image is 250px by 140px). We cannot simply use <code>height</code> and <code>width</code> altogether with <code>display: block</code> because these properties seem to be ignored. Eventually we set the <code>background</code> to point to the <a href="https://gph.is/QFXhvE" target="_blank" rel="noopener">GIF image hosted at Giphy</a>.</p>
 <p>Sadly it seems to work on Chrome only. Firefox, Internet Explorer 11 and Edge ignore the <code>background</code> property and interpret <code>line-height</code> and <code>padding</code> combination differently than Chrome while used in <code>console.log</code>.</p>
 <p><em> * Technically speaking, it’s not even a proper handler since it simply rethrows the error given. But you know, it’s <strong>for the science</strong>… ;) </em></p>
 <h2 id="Further-reading"><a href="#Further-reading" class="headerlink" title="Further reading"></a>Further reading</h2><ul>
-<li><a href="https://developers.google.com/web/tools/chrome-devtools/console/console-write#styling_console_output_with_css" target="_blank" rel="external">Styling console output with CSS at Google Developers</a></li>
-<li><a href="http://www.imdb.com/title/tt0113118/" target="_blank" rel="external">Friday ad IMDB</a></li>
+<li><a href="https://developers.google.com/web/tools/chrome-devtools/console/console-write#styling_console_output_with_css" target="_blank" rel="noopener">Styling console output with CSS at Google Developers</a></li>
+<li><a href="http://www.imdb.com/title/tt0113118/" target="_blank" rel="noopener">Friday ad IMDB</a></li>
 </ul>
 
 
@@ -315,7 +315,7 @@
                         </li>
                     
                 </ul>
-                <p class="copyright text-muted">&copy; 2017 Krzysztof Zbiciński<br></p>
+                <p class="copyright text-muted">&copy; 2018 Krzysztof Zbiciński<br></p>
                 <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
                 <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
             </div>
