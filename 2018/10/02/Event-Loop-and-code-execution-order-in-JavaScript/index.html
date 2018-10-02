@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="How asynchronous code is being handled in a single-threaded world of JavaScript.">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Krzysztof Zbiciński">
+    
+
+    <!--Social Title-->
+    
+        <meta property="og:title" content="Event Loop and code execution order"/>
+        <meta name="twitter:title" content="Event Loop and code execution order"/>      
+        <meta itemprop="name" content="Event Loop and code execution order"/>  
+    
+
+    <!--Social Description-->
+    
+        <meta property="og:description" content="How asynchronous code is being handled in a single-threaded world of JavaScript." />
+        <meta name="twitter:description" content="How asynchronous code is being handled in a single-threaded world of JavaScript." />       
+        <meta itemprop="description" content="How asynchronous code is being handled in a single-threaded world of JavaScript." />        
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Krzysztof Zbiciński - Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="https://zbic.in/2018/10/02/Event-Loop-and-code-execution-order-in-JavaScript/cover-70.jpg" />
+        <meta name="twitter:image:src" content="https://zbic.in/2018/10/02/Event-Loop-and-code-execution-order-in-JavaScript/cover-70.jpg">
+        <meta itemprop="image" content="https://zbic.in/2018/10/02/Event-Loop-and-code-execution-order-in-JavaScript/cover-70.jpg">     
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+    
+        <meta name="twitter:site" content="@zbicin" />
+        <meta name="twitter:creator" content="@zbicin">
+    
+
+    <!-- Title -->
+    
+    <title>Event Loop and code execution order - Krzysztof Zbiciński - Blog - Pragmatic web development</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-27343777-6', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/img/code.png">
+    
+
+    
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    
+	
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Krzysztof Zbiciński - Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/atom.xml">
+                            
+                                RSS
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-color: #decfaf; background-image: url('cover-70.jpg')">
+    <div class="backdrop" style="opacity: 0.5"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Event Loop and code execution order</h1>
+                    
+                    <h2 class="post-subheading">
+                        How async code is handled in a single-threaded world of JavaScript.
+                    </h2>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                            Posted by Krzysztof Zbiciński
+                        
+                        
+                            on
+                            2018-10-02.
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Event-Loop-and-code-execution-order"><a href="#Event-Loop-and-code-execution-order" class="headerlink" title="Event Loop and code execution order"></a>Event Loop and code execution order</h1><blockquote>
+<p>This article was originally posted in the <a href="https://geek.justjoin.it/event-loop-a-kolejnosc-wykonywania-kodu-javascript/" target="_blank" rel="noopener">Just Geek IT magazine</a> in September 2018 (in Polish). Here you can read it’s English translation. Unfortunately, the images are still in their original language, but I hope this will not discourage you from reading. Thanks for understanding! ;)</p>
+</blockquote>
+<p>JavaScript is a quite controversial programming language. Some people love it, others hate it. It has a lot of unique mechanisms which are not present and have no counterparts in other popular languages. Code execution order, which might be sometimes unintuitive, is definately one of them. It causes a synchronous and asynchronous worlds to mix according to the main topic of this article: Event Loop.</p>
+<h2 id="JavaScript-is-a-single-threaded-language-right"><a href="#JavaScript-is-a-single-threaded-language-right" class="headerlink" title="JavaScript is a single-threaded language, right?"></a>JavaScript is a single-threaded language, right?</h2><p>That’s correct, JavaScript is a single-threaded programming language. If we try to execute an infinite loop:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+<p>the browser will get inpatient pretty quickly and will suggest killing the tab. It is due to the fact, that the tab thread is constantly busy by going through the loop and therefore is not able to refresh/rerender the browser window. This is one of the reasons why JavaScript is rarely used for complex, time-consuming tasks such as image processing.</p>
+<p>Web pages are quite complicated though and a lot of things occur simultaneously. The browser downloads images, parses style sheets, in the same time sending HTTP requests in order to fetch our wall posts and renders the page. By some reason, everything works, despite the fact that only a single thread is available. There must be something more then, hidden under the hood…</p>
+<h2 id="A-web-browser-is-not-V8-SpiderMonkey-or-Chakra-alone"><a href="#A-web-browser-is-not-V8-SpiderMonkey-or-Chakra-alone" class="headerlink" title="A web browser is not V8, SpiderMonkey or Chakra alone"></a>A web browser is not V8, SpiderMonkey or Chakra alone</h2><p>In order to cope with a quite tedious task of handling modern web pages, the web browser needs a few elements working together. The heart and the soul is a JavaScript engine, such as V8 in Chrome and Node, SpiderMonkey in Firefox and Chakra in Edge. In addition to that, the browser contains several own APIs (this is where e.g. <code>setTimeout</code> and <code>alert</code> implementations belong) and three separate queues, which release elements with different priority.</p>
+<p><img src="Browser.png" alt="Diagram showing building blocks of a web browser" title="Diagram showing building blocks of a web browser"></p>
+<blockquote>
+<p>Unfortunately the world is not ideal and browsers have different event loop implementations. This article describes the mechanism basing on Chrome’s V8 behaviour. Description of differences across the browsers deserves a separate article ;).</p>
+</blockquote>
+<p>Let have a detailed look at each of the elements.</p>
+<h3 id="Call-stack"><a href="#Call-stack" class="headerlink" title="Call stack"></a>Call stack</h3><p><strong>Call stack</strong> is the heart of the browser, execution of each line of the code needs to go through it. Each function call causes another element to be put on the top of the stack, whereas returing from a function pops the first element out. JavaScript engine performs operations gathered within the stack until the stack becomes empty. </p>
+<p>Example:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">log</span>(<span class="params">...args</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(args);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">prepareMessageSync</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="string">`Hello <span class="subst">$&#123;name&#125;</span>! It's <span class="subst">$&#123;now.toISOString()&#125;</span>!`</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> message = prepareMessageSync(<span class="string">'justjoin.it'</span>);</span><br><span class="line">log(message); <span class="comment">// logs "Hello justjoin.it! It's  2018-06-16T08:25:06.641Z!"</span></span><br><span class="line">log(<span class="string">'End'</span>);</span><br></pre></td></tr></table></figure></p>
+<p><img src="Loop2.1.png" alt=""></p>
+<h3 id="Web-APIs"><a href="#Web-APIs" class="headerlink" title="Web APIs"></a>Web APIs</h3><p><strong>Web APIs</strong> - additional interfaces provided by the browser, which the engine can make use of.<br>These include: methods connected with timing (e.g. <code>setTimeout</code>), sending XHR requests (<code>XMLHttpRequest</code> class) or DOM tree manipulation and event handling. Even though we use them in JavaScript code, they can be asynchronous, since they work in separate threads belonging to the browser. When an API call is ready, it’s callback is placed in the task queue. </p>
+<h3 id="Task-queue"><a href="#Task-queue" class="headerlink" title="Task queue"></a>Task queue</h3><p>The next element is the <strong>task queue</strong> - this is where all of the function calls, that were passed as callbacks to the asynchronous methods of the Web API belong to. Nothing can be taken from this queue until the call stack is empty. In another words, not a single callback will be handled until there is any function being executed at the moment. This rule explains behaviour standing behind the <code>setTimeout(fn, 0)</code> “trick”. The <code>fn</code> function will be simply executed as soon as the browser becomes idle.</p>
+<p>The task queue works according to the <em>FIFO</em> principle (First In First Out), therefore the earlier the element was put in the queue, the sooner it will be handled. Until taking <strong>a single element</strong> from the queue, event loop proceeds to the call stack and then, to the next queue - the microtask queue, which will be covered a bit later. So with each “cycle” of the loop, only a single task from the task queue can be handled.</p>
+<p><img src="Loop2.2.png" alt=""></p>
+<p>Let’s add an asynchronous HTTP request to the previous example:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">prepareMessageXHR</span>(<span class="params">name, callback</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> request = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">    request.open(<span class="string">'GET'</span>, <span class="string">`/api/message/<span class="subst">$&#123;name&#125;</span>`</span>); </span><br><span class="line">    request.onreadystatechange = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (request.readyState === <span class="number">4</span> &amp;&amp; request.status === <span class="number">200</span>) &#123;</span><br><span class="line">            callback(reqeust.responseText);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    request.send(<span class="literal">null</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">prepareMessageXHR(<span class="string">'justjoin.it'</span>, log); <span class="comment">// logs a response from /api/message/justjoin.it</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;<span class="number">1000000</span>; i++) &#123;&#125;; <span class="comment">// a long synchronous operation</span></span><br><span class="line">log(<span class="string">'End'</span>);</span><br></pre></td></tr></table></figure></p>
+<p>Despite the fact, that the API can return a response before the long synchronous operation finishes, the <code>logResponse</code> function execution have to wait until the call stack becomes empty, even if it takes a lot of time.</p>
+<p>In order to simplify things a bit, we can simulate an instant HTTP request using the <code>setTimeout</code> function with a delay equal to <code>0</code>, which causes the callback to be placed in the task queue almost immediately.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">prepareMessageTimeout</span>(<span class="params">name, callback</span>) </span>&#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">        callback(<span class="string">`Hello <span class="subst">$&#123;name&#125;</span>! It's <span class="subst">$&#123;now.toISOString()&#125;</span>!`</span>);</span><br><span class="line">    &#125;, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">prepareMessageTimeout(<span class="string">'justjoin.it'</span>, log); <span class="comment">// 2. logs "Hello justjoin.it! It's 2018-06-16T08:25:06.641Z!</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;<span class="number">1000000</span>; i++) &#123;&#125;; <span class="comment">// a long synchronous operation</span></span><br><span class="line">log(<span class="string">'End'</span>); <span class="comment">// 1. logs "End"</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Microtask-queue"><a href="#Microtask-queue" class="headerlink" title="Microtask queue"></a>Microtask queue</h3><p>In the ES6 version of JavaScript a native implementation of Promises has been introduced. This is one of the mechanisms using a separate queue - <strong>a microtask queue</strong>. It is places right after the call stack in the loop scheme. Contrary to the task queue, where the engine was able to pick only a single item for each loop iteration, elements from the microtask queue are taken one after another, <strong>until the microtask queue becomes empty</strong>.</p>
+<p>Another mechanisms that use this queue include <code>MutationObserver</code>, <code>setImmediate</code> and <code>process.nextTick</code> which is available in Node.js.</p>
+<p><img src="Loop2.3.png" alt=""></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">prepareMessageFetch</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> fetch(<span class="string">`/api/message/<span class="subst">$&#123;name&#125;</span>`</span>);</span><br><span class="line">&#125;</span><br><span class="line">prepareMessageXHR(<span class="string">'justjoin.it'</span>, log); <span class="comment">// 3. logs a response from /api/message/justjoin.it</span></span><br><span class="line">prepareMessageFetch(<span class="string">'justjoin.it'</span>).then(log); <span class="comment">// 2. logs a response from /api/message/justjoin.it</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;<span class="number">1000000</span>; i++) &#123;&#125;; <span class="comment">// a long synchronous operation</span></span><br><span class="line">log(<span class="string">'End'</span>); <span class="comment">// 1. logs "End"</span></span><br></pre></td></tr></table></figure>
+<p>Or, using the fake, instant request one more time:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">prepareMessagePromise</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Promise</span>.resolve(<span class="string">`Hello <span class="subst">$&#123;name&#125;</span>! It's <span class="subst">$&#123;now.toISOString()&#125;</span>!`</span>);</span><br><span class="line">&#125;</span><br><span class="line">prepareMessageTimeout(<span class="string">'justjoin.it'</span>, log); <span class="comment">// 3. logs a response from setTimeout</span></span><br><span class="line">prepareMessagePromise(<span class="string">'justjoin.it'</span>).then(log); <span class="comment">// 2. logs a response from Promise</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;<span class="number">1000000</span>; i++) &#123;&#125;; <span class="comment">// a long synchronous operation</span></span><br><span class="line">log(<span class="string">'End'</span>); <span class="comment">// 1. logs "End"</span></span><br></pre></td></tr></table></figure>
+<h3 id="Render-queue"><a href="#Render-queue" class="headerlink" title="Render queue"></a>Render queue</h3><p>In order to give a smooth experience, the browser has to refresh webpages about 60 times per second. A <strong>render queue</strong> contains tasks, that will be performed before the next render of the page occurs. If we want to place a piece of code there (e.g. in order to recalculate position of an object) we need to use the <code>requestAnimationFrame</code> function. The render queue is being processed until it becomes empty - the same as the microtask queue.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">prepareMessagePromise(<span class="string">'justjoin.it'</span>).then(log); <span class="comment">// 2. logs Promise response</span></span><br><span class="line">prepareMessageTimeout(<span class="string">'justjoin.it'</span>, log); <span class="comment">// 5. logs a response from setTimeout</span></span><br><span class="line">requestAnimationFrame(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    log(<span class="string">'requestAnimationFrame 1'</span>); <span class="comment">// 3. logs a response from requestAnimationFrame</span></span><br><span class="line">&#125;);</span><br><span class="line">requestAnimationFrame(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    log(<span class="string">'requestAnimationFrame 2'</span>); <span class="comment">// 4. logs a response from requestAnimationFrame</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;<span class="number">1000000</span>; i++) &#123;&#125;; <span class="comment">// a long synchronous operation</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'End'</span>); <span class="comment">// 1. logs "End"</span></span><br></pre></td></tr></table></figure>
+<p><img src="Loop2.4.png" alt=""></p>
+<h2 id="tl-59-dr"><a href="#tl-59-dr" class="headerlink" title="tl&#59;dr"></a>tl&#59;dr</h2><p>We can describe the whole process in these four steps:</p>
+<ol>
+<li>If there is something in the task queue, <strong>pick the first element and put it on the call stack</strong>.</li>
+<li>Process the call stack <strong>until it becomes empty</strong>.</li>
+<li>Process the microtask queue <strong>until it becomes empty</strong>.</li>
+<li>Process instructions coming from <code>requestAnimationFrame</code>, recalculate styles, render the page.</li>
+</ol>
+<p>In a graphic form it would look something like this:</p>
+<p><img src="Syzyf-Filip.png" alt="Metafora" title="Metafora"><br><em>Metaphorical representation of the Event Loop. Author: Filip Smulski.</em></p>
+<h2 id="Puzzles"><a href="#Puzzles" class="headerlink" title="Puzzles"></a>Puzzles</h2><p><strong>1.</strong> What is going to appear in the console?</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> foo = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> observer = <span class="keyword">new</span> MutationObserver(<span class="function"><span class="keyword">function</span> <span class="title">onChange</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(foo); <span class="comment">// ?</span></span><br><span class="line">&#125;);</span><br><span class="line">observer.observe(<span class="built_in">document</span>.body, &#123; <span class="attr">childList</span>: <span class="literal">true</span> &#125;);</span><br><span class="line"><span class="built_in">document</span>.body.innerHTML = <span class="string">'justjoin.it'</span>;</span><br><span class="line">foo = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// What is going to appear in the console?</span></span><br></pre></td></tr></table></figure>
+<p><strong>Answer:</strong> <code>2</code>.</p>
+<p><strong>Why?</strong> <code>MutationObserver</code> uses the microtask queue, which is not being handled until the call stack becomes empty. Assigning the value of <code>2</code> to the variable <code>foo</code> will occur before the <code>onChange</code> callback will be executed.</p>
+<p><strong>2.</strong> What will be the order of the messages?</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'timeout'</span>), <span class="number">0</span>);</span><br><span class="line">requestAnimationFrame(<span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'frame'</span>));</span><br><span class="line"><span class="built_in">Promise</span>.resolve().then(<span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'promise'</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// What will be the order of the messages?</span></span><br></pre></td></tr></table></figure>
+<p><strong>Answer:</strong> <code>promise</code>, <code>frame</code>, <code>timeout</code>.</p>
+<p><strong>Why?</strong> After processing the whole call stack, the microtask queue is being handled (which is used by promises), then the render queue (which is used by <code>requestAnimationFrame</code>) and only after that, a task from the task queue (used by <code>setTimeout</code>) can be picked up. As a result, the messages will be presented in the reversed order.</p>
+<p><strong>3.</strong> What will be the order of the messages after clicking the button?</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>Click!<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> button = <span class="built_in">document</span>.querySelector(<span class="string">'button'</span>);</span><br><span class="line">button.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> <span class="title">onClick1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">Promise</span>.resolve().then(<span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'promise1'</span>));</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'click1'</span>);</span><br><span class="line">&#125;);</span><br><span class="line">button.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> <span class="title">onClick2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">Promise</span>.resolve().then(<span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'promise2'</span>));</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'click2'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// What will be the order of the messages after clicking the button?</span></span><br></pre></td></tr></table></figure>
+<p><strong>Answer:</strong> <code>click1</code>, <code>promise1</code>, <code>click2</code>, <code>promise2</code>.</p>
+<p><strong>Why?</strong> There are two functions being attached to the <code>click</code> event of the button. Their executions will be placed in the task queue one after another. In the next loop cycle, only the <code>click1</code> function will be picked from the queue. As a result, the function logging <code>promise1</code> will be placed in the microtask queue, which will be processed right after the call stack becomes empty. Only after the microtask queue becomes empty, the <code>onClick2</code> function call can be picked from the task queue and handled accordingly.</p>
+<p><strong>3a.</strong> What will be the order of the messages after clicking the button?</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> button = <span class="built_in">document</span>.querySelector(<span class="string">'button'</span>);</span><br><span class="line">button.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> <span class="title">onClick1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">Promise</span>.resolve().then(<span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'promise1'</span>));</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'click1'</span>);</span><br><span class="line">&#125;);</span><br><span class="line">button.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> <span class="title">onClick2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">Promise</span>.resolve().then(<span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'promise2'</span>));</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'click2'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">button.click();</span><br><span class="line"></span><br><span class="line"><span class="comment">// What will be the order of the messages after clicking the button?</span></span><br></pre></td></tr></table></figure>
+<p><strong>Answer:</strong> <code>click1</code>, <code>click2</code>, <code>promise1</code>, <code>promise2</code>.</p>
+<p><strong>Wait… Why?</strong> Contrary to the previous example, <code>onClick1</code> and <code>onClick2</code> functions will be executed in a synchronous manner, therefore they both will be placed in the call stack immediately instead of “going through the task queue” first.</p>
+<h2 id="What-next"><a href="#What-next" class="headerlink" title="What next?"></a>What next?</h2><p>I hope that this article has clarified a one of the most important concepts that one can find in the JavaScript world. If you want to visualize how the event loop works in any given situation, I can strongly recommend playing with the <a href="http://latentflip.com/loupe" target="_blank" rel="noopener">Loupe tool created by Philip Roberts</a> and his <a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ" target="_blank" rel="noopener">wonderful presentation from the JSConf</a>.</p>
+<div class="video-container"><iframe src="//www.youtube.com/embed/8aGhZQkoFbQ" frameborder="0" allowfullscreen></iframe></div>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul>
+<li><p><a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ" target="_blank" rel="noopener">YouTube: “Philip Roberts: What the heck is the event loop anyway? | JSConf EU 2014”</a></p>
+</li>
+<li><p><a href="https://www.youtube.com/watch?v=cCOL7MC4Pl0" target="_blank" rel="noopener">YouTube: “Jake Archibald: In The Loop - JSConf.Asia 2018”</a></p>
+</li>
+</ul>
+<ul>
+<li><p><a href="https://abc.danch.me/microtasks-macrotasks-more-on-the-event-loop-881557d7af6f" target="_blank" rel="noopener">“Microtasks &amp; Macrotasks — More On The Event Loop”</a></p>
+</li>
+<li><p><a href="https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/" target="_blank" rel="noopener">“Tasks, microtasks, queues and schedules”</a></p>
+</li>
+<li><p><a href="https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/" target="_blank" rel="noopener">“The Node.js Event Loop, Timers, and process.nextTick()”</a></p>
+</li>
+</ul>
+
+
+                <!-- Tags and categories -->
+                
+                    <p class="post-tags">
+                        
+                            Tags: 
+
+
+<a href="/tags/JavaScript/">#JavaScript</a>
+
+
+                        
+                    </p>
+                    <p class="post-categories">
+                        
+                    </p>
+                
+                
+                
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59db9b8d10126f1d"></script>
+
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    <div class="addthis_inline_share_toolbox"></div>
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+    <hr />
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                        <li>
+                            <a href="https://twitter.com/zbicin" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/zbicin" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="/atom.xml" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-feed fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2018 Krzysztof Zbiciński<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'zbicin';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+</body>
+
+</html>

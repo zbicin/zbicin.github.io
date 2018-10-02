@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zbic.in/"/>
-  <updated>2018-05-19T11:34:12.634Z</updated>
+  <updated>2018-10-02T16:31:55.476Z</updated>
   <id>https://zbic.in/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Event Loop and code execution order</title>
+    <link href="https://zbic.in/2018/10/02/Event-Loop-and-code-execution-order-in-JavaScript/"/>
+    <id>https://zbic.in/2018/10/02/Event-Loop-and-code-execution-order-in-JavaScript/</id>
+    <published>2018-10-02T18:22:39.000Z</published>
+    <updated>2018-10-02T16:31:55.476Z</updated>
+    
+    <summary type="html">
+    
+      How asynchronous code is being handled in a single-threaded world of JavaScript.
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://zbic.in/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>HTTPS, GitHub Pages and a custom domain</title>
