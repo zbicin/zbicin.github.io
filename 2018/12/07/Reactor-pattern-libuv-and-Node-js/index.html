@@ -207,19 +207,23 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>Being able to <em>perform a non-blocking I/O operations</em> was one of the most vibrant <em>selling points</em> of Node.js back in the days. This article provides an introduction to the inner mechanisms of this environment that allow Node.js to deal with multitasking pretty much as cool as Xabi Alonso does:</p>
-<img src="/2018/12/07/Reactor-pattern-libuv-and-Node-js/xabi.gif" class="center" title="Xabi Alonso playing it cool">
+                <p>Being able to <em>perform non-blocking I/O operations</em> was one of the most vibrant <em>selling points</em> of Node.js back in the days. This article provides an introduction to the inner mechanisms of this environment that allow it to deal with multitasking pretty much as cool as Xabi Alonso does:</p>
+<p><img src="/2018/12/07/Reactor-pattern-libuv-and-Node-js/xabi.gif" class="center" title="Xabi Alonso playing it cool"></p>
 <p>But first we need to talk about the <em>reactor pattern</em>.</p>
-<h2 id="What-is-the-reactor-pattern"><a href="#What-is-the-reactor-pattern" class="headerlink" title="What is the reactor pattern?"></a>What is the reactor pattern?</h2><p>The reactor pattern is one of the most commonly used patterns in web development. There is a pretty good chance that you are very familiar with it without even knowing it. Simply speaking, the application starts listening for an I/O event of a specified type, providing a function that should be launched as a ‘reaction’ to this event. Sounds exactly like JavaScript callbacks, isn’t it? ;)</p>
-<p>Thanks to this pattern we can achieve non-blocking I/O operations, which usually can take some time when being done in a classical, synchronous way (e.g. a database query, an HTTP request, reading a file).</p>
-<p>In reactor pattern, when some part of code requests an I/O operation, the request is put in an <em>Event Queue</em> within the <em>Event Demultiplexer</em>. Then the control is immediatley returned back to the developer’s code. Thanks to this the application doesn’t freeze and can immediately continue with other operations (e.g. performing calculations, listening for UI events and responding to user’s input, etc.). </p>
+<h2>What is the reactor pattern?</h2>
+<p>The reactor pattern is one of the most commonly used patterns in web development. There is a pretty good chance that you are very familiar with it without even realizing it. Simply speaking, the application starts listening for an I/O event of a specified type, providing a function that should be launched as a 'reaction' to this event. Sounds exactly like JavaScript callbacks, isn't it? ;)</p>
+<p>Thanks to this pattern we can use non-blocking I/O operations, which usually can take some time when being done in a classical, synchronous way (e.g. a database query, an HTTP request, reading a file).</p>
+<p>In reactor pattern, when some part of code requests an I/O operation, the request is put in an <em>Event Queue</em> within the <em>Event Demultiplexer</em>. Then the control is immediatley returned back to the developer's code. Thanks to this the application doesn't freeze and can immediately continue with other operations (e.g. performing calculations, listening for UI events and responding to user's input, etc.).</p>
 <p>In the meantime, the so-called <em>Event Loop</em> processes the events stored in the <em>Event Queue</em>. It iterates through them and invokes the associated functions (<em>callbacks</em> or <em>handlers</em>) when ready.</p>
-<p>Let’s see the example pseudocode implementation of en event loop taken from the book <a href="https://nikhilm.github.io/uvbook/" target="_blank" rel="noopener"><em>An Introduction to libuv</em></a> by Nikhil Marathe:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">while there are still events to process:</span><br><span class="line">    e = get the next event</span><br><span class="line">    if there is a callback associated with e:</span><br><span class="line">        call the callback</span><br></pre></td></tr></table></figure></p>
+<p>Let's see the example pseudocode implementation of en event loop taken from the book <a href="https://nikhilm.github.io/uvbook/" target="_blank" rel="noopener"><em>An Introduction to libuv</em></a> by Nikhil Marathe:
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">while there are still events to process:</span><br><span class="line">    e = get the next event</span><br><span class="line">    if there is a callback associated with e:</span><br><span class="line">        call the callback</span><br></pre></td></tr></table></figure></p>
 <p>Each of the operating systems (Linux, Mac OSX, Windows) has its own implementation of an <em>Event Demultiplexer</em>. Therefore an abstraction layer above those implementations had to be introduced.</p>
-<h2 id="libuv-to-the-rescue"><a href="#libuv-to-the-rescue" class="headerlink" title="libuv to the rescue"></a>libuv to the rescue</h2><p>In the early days of Node.js it used a library called <em>libev</em> to handle abstraction above the <em>Event Demultiplexer</em> implementations. Unfortunately it only supported Unix operating systems (<em>kqueue</em> and <em>(e)poll</em>) and as the Node.js grew in popularity it became insufficient, because it demanded support for Windows as well. </p>
-<p>Then the famous <em>libuv</em> was introduced, which is an abstraction above all of the implementations of <em>Event Demultiplexers</em> (including Windows implementation: <em>IOCP</em>). It takes the responsibility for collecting events from the operating system or monitoring other sources of events. While being initially developed mostly with Node.js in mind, the <em>libuv</em> library is now widely used by different projects, including Mozilla’s <em>Rust</em> programming language.</p>
-<h2 id="How-it-all-fits-together"><a href="#How-it-all-fits-together" class="headerlink" title="How it all fits together?"></a>How it all fits together?</h2><p>I think that the best idea is to show it on a diagram. The architecture of a Node.js application can be presented as follows:</p>
-<img src="/2018/12/07/Reactor-pattern-libuv-and-Node-js/NodejsArchitecture.png" class="center" title="Node.js application" alt="s architecture">
+<h2>libuv to the rescue</h2>
+<p>In the early days of Node.js a library called <em>libev</em> was used to handle abstraction above various <em>Event Demultiplexer</em> implementations. Unfortunately it only supported Unix operating systems (<em>kqueue</em> and <em>(e)poll</em>) and as the Node.js grew in popularity, this library became insufficient, because it demanded support for Windows as well.</p>
+<p>Then the famous <em>libuv</em> was introduced, which is an abstraction above all of the implementations of <em>Event Demultiplexers</em> (including Windows implementation: <em>IOCP</em>). It takes the responsibility for collecting events from the operating system or monitoring other sources of events. While being initially developed mostly with Node.js in mind, the <em>libuv</em> library is now widely used by different projects, including Mozilla's <em>Rust</em> programming language.</p>
+<h2>How it all fits together?</h2>
+<p>I think that the best idea is to show it on a diagram. The architecture of a Node.js application can be presented as follows:</p>
+<p><img src="/2018/12/07/Reactor-pattern-libuv-and-Node-js/NodejsArchitecture.png" class="center" title="Node.js application" alt="s architecture"></p>
 <ul>
 <li><strong>Application code:</strong> self explanatory ;),</li>
 <li><strong>Node.js core:</strong> (also called <em>node-core</em>) is a JavaScript implementation of Node.js APIs,</li>
@@ -227,13 +231,16 @@
 <li><strong>V8:</strong> execution engine developed initially for Google Chrome,</li>
 <li><strong>libuv:</strong> abstraction over <em>Event Demultiplexer</em> of a hosting OS.</li>
 </ul>
-<h2 id="Final-thoughts"><a href="#Final-thoughts" class="headerlink" title="Final thoughts"></a>Final thoughts</h2><p>I hope this short introduction is a good starting point of learning about the inner mechanisms that make Node.js environment work. We’ve only scratched the surface, so if you’re interested in more detailed information, I can suggest going through the references as the next step. </p>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<h2>Final thoughts</h2>
+<p>I hope this short introduction is a good starting point of learning about the inner mechanisms that make Node.js environment work. We've only scratched the surface, so if you're interested in more detailed information, I can suggest going through the references as the next step.</p>
+<h2>References</h2>
+<ul>
 <li><a href="https://nikhilm.github.io/uvbook/" target="_blank" rel="noopener"><em>An Introduction to libuv</em></a> by Nikhil Marathe</li>
 <li><em>Node.js Design Patterns Second Edition</em> by Mario Casciaro, Luciano Mammino</li>
 <li><a href="https://hackernoon.com/the-node-js-system-51090c35dddc" target="_blank" rel="noopener"><em>The Node.js System</em></a> by Aman Mittal</li>
 </ul>
-<p class="unsplash-credit">Photo by <a href="https://unsplash.com/photos/LWnD8U2OReU" target="_blank">Frédéric Paulussen</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</p> 
+<p></p><p class="unsplash-credit">Photo by <a href="https://unsplash.com/photos/LWnD8U2OReU" target="_blank">Frédéric Paulussen</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</p><p></p>
+
 
                 <!-- Tags and categories -->
                 
