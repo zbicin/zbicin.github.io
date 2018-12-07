@@ -10,16 +10,16 @@ cover_color: D5A59D
 description: The magic behind the non-blocking nature of Node.js.
 ---
 
-Being able to _perform a non-blocking I/O operations_ was one of the most vibrant _selling points_ of Node.js back in the days. This article provides an introduction to the inner mechanisms of this environment that allow Node.js to deal with multitasking pretty much as cool as Xabi Alonso does:
+Being able to _perform non-blocking I/O operations_ was one of the most vibrant _selling points_ of Node.js back in the days. This article provides an introduction to the inner mechanisms of this environment that allow it to deal with multitasking pretty much as cool as Xabi Alonso does:
 
 {% asset_img center xabi.gif Xabi Alonso playing it cool %}
 
 But first we need to talk about the _reactor pattern_.
 
 ## What is the reactor pattern?
-The reactor pattern is one of the most commonly used patterns in web development. There is a pretty good chance that you are very familiar with it without even knowing it. Simply speaking, the application starts listening for an I/O event of a specified type, providing a function that should be launched as a 'reaction' to this event. Sounds exactly like JavaScript callbacks, isn't it? ;)
+The reactor pattern is one of the most commonly used patterns in web development. There is a pretty good chance that you are very familiar with it without even realizing it. Simply speaking, the application starts listening for an I/O event of a specified type, providing a function that should be launched as a 'reaction' to this event. Sounds exactly like JavaScript callbacks, isn't it? ;)
 
-Thanks to this pattern we can achieve non-blocking I/O operations, which usually can take some time when being done in a classical, synchronous way (e.g. a database query, an HTTP request, reading a file).
+Thanks to this pattern we can use non-blocking I/O operations, which usually can take some time when being done in a classical, synchronous way (e.g. a database query, an HTTP request, reading a file).
 
 In reactor pattern, when some part of code requests an I/O operation, the request is put in an _Event Queue_ within the _Event Demultiplexer_. Then the control is immediatley returned back to the developer's code. Thanks to this the application doesn't freeze and can immediately continue with other operations (e.g. performing calculations, listening for UI events and responding to user's input, etc.). 
 
@@ -36,7 +36,7 @@ while there are still events to process:
 Each of the operating systems (Linux, Mac OSX, Windows) has its own implementation of an _Event Demultiplexer_. Therefore an abstraction layer above those implementations had to be introduced.
 
 ## libuv to the rescue
-In the early days of Node.js it used a library called _libev_ to handle abstraction above the _Event Demultiplexer_ implementations. Unfortunately it only supported Unix operating systems (_kqueue_ and _(e)poll_) and as the Node.js grew in popularity it became insufficient, because it demanded support for Windows as well. 
+In the early days of Node.js a library called _libev_ was used to handle abstraction above various _Event Demultiplexer_ implementations. Unfortunately it only supported Unix operating systems (_kqueue_ and _(e)poll_) and as the Node.js grew in popularity, this library became insufficient, because it demanded support for Windows as well. 
 
 Then the famous _libuv_ was introduced, which is an abstraction above all of the implementations of _Event Demultiplexers_ (including Windows implementation: _IOCP_). It takes the responsibility for collecting events from the operating system or monitoring other sources of events. While being initially developed mostly with Node.js in mind, the _libuv_ library is now widely used by different projects, including Mozilla's _Rust_ programming language.
 
