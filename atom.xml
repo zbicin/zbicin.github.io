@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zbic.in/"/>
-  <updated>2018-10-02T16:36:51.655Z</updated>
+  <updated>2018-12-07T13:40:41.440Z</updated>
   <id>https://zbic.in/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Reactor pattern, libuv and Node.js</title>
+    <link href="https://zbic.in/2018/12/07/Reactor-pattern-libuv-and-Node-js/"/>
+    <id>https://zbic.in/2018/12/07/Reactor-pattern-libuv-and-Node-js/</id>
+    <published>2018-12-07T13:16:47.000Z</published>
+    <updated>2018-12-07T13:40:41.440Z</updated>
+    
+    <summary type="html">
+    
+      The magic behind the non-blocking nature of Node.js.
+    
+    </summary>
+    
+    
+      <category term="Node.js" scheme="https://zbic.in/tags/Node-js/"/>
+    
+      <category term="JavaScript" scheme="https://zbic.in/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>Event Loop and code execution order</title>
