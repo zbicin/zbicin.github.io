@@ -49,7 +49,7 @@ Let's say that we have a following task defined in a `package.json`:
 }
 ```
 
-It's equivalent in `.vscode/launch.json` would be:
+Its equivalent in `.vscode/launch.json` would be:
 
 ```json
 {
