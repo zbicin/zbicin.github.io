@@ -5,6 +5,7 @@ tags:
   - Apache Cordova
   - Adobe PhoneGap
   - Android
+  - Debugging
 date: 2017-10-08 17:14:11
 cover: lilly-rum-342740.jpg
 cover_color: 323034

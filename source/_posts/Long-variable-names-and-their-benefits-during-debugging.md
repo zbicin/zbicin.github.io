@@ -1,7 +1,8 @@
 ---
 title: Long variable names and their benefits during debugging
 date: 2015-07-11
-tags: Other
+tags: 
+  - Debugging
 ---
 
 Generally I tended to make jokes on Java and its long class, methods and variable names. The fact that there is a question on StackOverflow asking ["When a Java method name is too long?"](http://stackoverflow.com/questions/2230871/when-is-a-java-method-name-too-long) made it even more ridiculous for me.
