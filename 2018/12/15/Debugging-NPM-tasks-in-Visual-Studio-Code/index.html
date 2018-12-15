@@ -10,7 +10,7 @@
 
     <!--Description-->
     
-        <meta name="description" content="The magic behind the non-blocking nature of Node.js.">
+        <meta name="description" content="How to chase down ambiguous compilation errors.">
     
 
     <!--Author-->
@@ -20,16 +20,16 @@
 
     <!--Social Title-->
     
-        <meta property="og:title" content="Reactor pattern, libuv and Node.js"/>
-        <meta name="twitter:title" content="Reactor pattern, libuv and Node.js"/>      
-        <meta itemprop="name" content="Reactor pattern, libuv and Node.js"/>  
+        <meta property="og:title" content="Debugging NPM tasks in Visual Studio Code"/>
+        <meta name="twitter:title" content="Debugging NPM tasks in Visual Studio Code"/>      
+        <meta itemprop="name" content="Debugging NPM tasks in Visual Studio Code"/>  
     
 
     <!--Social Description-->
     
-        <meta property="og:description" content="The magic behind the non-blocking nature of Node.js." />
-        <meta name="twitter:description" content="The magic behind the non-blocking nature of Node.js." />       
-        <meta itemprop="description" content="The magic behind the non-blocking nature of Node.js." />        
+        <meta property="og:description" content="How to chase down ambiguous compilation errors." />
+        <meta name="twitter:description" content="How to chase down ambiguous compilation errors." />       
+        <meta itemprop="description" content="How to chase down ambiguous compilation errors." />        
     
 
     <!--Open Graph Site Name-->
@@ -42,9 +42,9 @@
 
     <!--Page Cover-->
     
-        <meta property="og:image" content="https://zbic.in/2018/12/07/Reactor-pattern-libuv-and-Node-js/cover-70.jpg" />
-        <meta name="twitter:image:src" content="https://zbic.in/2018/12/07/Reactor-pattern-libuv-and-Node-js/cover-70.jpg">
-        <meta itemprop="image" content="https://zbic.in/2018/12/07/Reactor-pattern-libuv-and-Node-js/cover-70.jpg">     
+        <meta property="og:image" content="https://zbic.in/2018/12/15/Debugging-NPM-tasks-in-Visual-Studio-Code/cover-70.jpg" />
+        <meta name="twitter:image:src" content="https://zbic.in/2018/12/15/Debugging-NPM-tasks-in-Visual-Studio-Code/cover-70.jpg">
+        <meta itemprop="image" content="https://zbic.in/2018/12/15/Debugging-NPM-tasks-in-Visual-Studio-Code/cover-70.jpg">     
     
 
         <meta name="twitter:card" content="summary_large_image">
@@ -55,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>Reactor pattern, libuv and Node.js - Krzysztof Zbiciński - Blog - Pragmatic web development</title>
+    <title>Debugging NPM tasks in Visual Studio Code - Krzysztof Zbiciński - Blog - Pragmatic web development</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -169,16 +169,16 @@
     <!-- Page Header -->
 <!-- Set your background image for this header in your post front-matter: cover -->
 
-<header class="intro-header" style="background-color: #D5A59D; background-image: url('cover-70.jpg')">
+<header class="intro-header" style="background-color: #323034; background-image: url('cover-70.jpg')">
     <div class="backdrop" style="opacity: 0.5"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>Reactor pattern, libuv and Node.js</h1>
+                    <h1>Debugging NPM tasks in Visual Studio Code</h1>
                     
                     <h2 class="post-subheading">
-                        The magic behind the non-blocking nature of Node.js.
+                        How to chase down ambiguous compilation errors.
                     </h2>
                     
                     <span class="meta">
@@ -188,7 +188,7 @@
                         
                         
                             on
-                            2018-12-07.
+                            2018-12-15.
                         
                     </span>
                 </div>
@@ -207,33 +207,27 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>Being able to <em>perform non-blocking I/O operations</em> was one of the most vibrant <em>selling points</em> of Node.js back in the days. This article provides an introduction to the reactor pattern, the role of the <em>libuv</em> library and how they both empower Node.js to deal with multitasking pretty much as cool as Xabi Alonso does:</p>
-<img src="/2018/12/07/Reactor-pattern-libuv-and-Node-js/xabi.gif" class="center" title="Xabi Alonso playing it cool">
-<h2 id="What-is-the-reactor-pattern"><a href="#What-is-the-reactor-pattern" class="headerlink" title="What is the reactor pattern?"></a>What is the reactor pattern?</h2><p>The reactor pattern is one of the most commonly used patterns in web development. There is a pretty good chance that you are very familiar with it without even realizing it. Simply speaking, the application starts listening for an I/O event of a specified type, providing a function that should be launched as a ‘reaction’ to this event. Sounds exactly like JavaScript callbacks, isn’t it? ;)</p>
-<p>Thanks to this pattern we can use non-blocking I/O operations, which usually can take some time when being done in a classical, synchronous way (e.g. a database query, an HTTP request, reading a file).</p>
-<p>When some part of code requests an I/O operation, the request is put in an <em>Event Queue</em> within an <em>Event Demultiplexer</em>. Then the control is immediatley returned back to the developer’s code. Thanks to this the application doesn’t freeze and can immediately continue with other operations (e.g. performing calculations, listening for UI events and responding to user’s input, etc.). </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// waits until the whole file contents are loaded</span></span><br><span class="line"><span class="keyword">const</span> bigFile1 = fs.readFileSync(<span class="string">'bigFile.txt'</span>); </span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> bigFile2 = <span class="literal">null</span>;</span><br><span class="line"><span class="comment">// requests to load file contents, provides a handler and immediately proceeds with code execution</span></span><br><span class="line">fs.readFile(<span class="string">'bigFile.txt'</span>, <span class="function"><span class="keyword">function</span> <span class="title">handler</span>(<span class="params">err, data</span>) </span>&#123; </span><br><span class="line">  bigFile2 = data;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>In the meantime, the so-called <em>Event Loop</em> processes the events stored in the <em>Event Queue</em>. It iterates through them and invokes the associated functions (<em>callbacks</em> or <em>handlers</em>) when ready.</p>
-<p>Let’s see the example pseudocode implementation of an <em>Event Loop</em> taken from the book <a href="https://nikhilm.github.io/uvbook/" target="_blank" rel="noopener"><em>An Introduction to libuv</em></a> by Nikhil Marathe:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">while there are still events to process:</span><br><span class="line">    e = get the next event</span><br><span class="line">    if there is a callback associated with e:</span><br><span class="line">        call the callback</span><br></pre></td></tr></table></figure></p>
-<p>Each of the operating systems (Linux, Mac OSX, Windows) has its own implementation of an <em>Event Demultiplexer</em>. Therefore an abstraction layer above those implementations had to be introduced.</p>
-<h2 id="libuv-to-the-rescue"><a href="#libuv-to-the-rescue" class="headerlink" title="libuv to the rescue"></a>libuv to the rescue</h2><p>In the early days of Node.js a library called <em>libev</em> was used to handle abstraction above Mac OSX and Linux implementations of <em>Event Demultiplexers</em> (<em>kqueue</em> and <em>(e)poll</em>). As Node.js grew in popularity, this library became insufficient, because support for Windows was demanded as well. </p>
-<p>Then the famous <em>libuv</em> was introduced, which covered it all (including Windows implementation: <em>IOCP</em>). It takes the responsibility for collecting events from the operating system or monitoring other sources of events. While being initially developed mostly with Node.js in mind, the <em>libuv</em> library is now widely used by different projects, including Mozilla’s <em>Rust</em> programming language.</p>
-<h2 id="How-it-all-fits-together"><a href="#How-it-all-fits-together" class="headerlink" title="How it all fits together?"></a>How it all fits together?</h2><p>I think that the best idea is to show it on a diagram. The architecture of a Node.js application can be presented as follows:</p>
-<img src="/2018/12/07/Reactor-pattern-libuv-and-Node-js/NodejsArchitecture.png" class="center" title="Node.js application" alt="s architecture">
-<ul>
-<li><strong>Application code:</strong> self explanatory ;),</li>
-<li><strong>Node.js core:</strong> (also called <em>node-core</em>) is a JavaScript implementation of Node.js APIs,</li>
-<li><strong>Bindings:</strong> wrap and expose <em>libuv</em> and other low level functionality to JavaScript,</li>
-<li><strong>V8:</strong> execution engine developed initially for Google Chrome,</li>
-<li><strong>libuv:</strong> abstraction over <em>Event Demultiplexer</em> of a hosting OS.</li>
-</ul>
-<h2 id="Final-thoughts"><a href="#Final-thoughts" class="headerlink" title="Final thoughts"></a>Final thoughts</h2><p>I hope this short introduction is a good starting point of learning about the inner mechanisms that make Node.js environment work. We’ve only scratched the surface, so if you’re interested in more detailed information, I can suggest going through the references as the next step. </p>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
-<li><a href="https://nikhilm.github.io/uvbook/" target="_blank" rel="noopener"><em>An Introduction to libuv</em></a> by Nikhil Marathe</li>
-<li><em>Node.js Design Patterns Second Edition</em> by Mario Casciaro, Luciano Mammino</li>
-<li><a href="https://hackernoon.com/the-node-js-system-51090c35dddc" target="_blank" rel="noopener"><em>The Node.js System</em></a> by Aman Mittal</li>
-</ul>
-<p class="unsplash-credit">Photo by <a href="https://unsplash.com/photos/LWnD8U2OReU" target="_blank">Frédéric Paulussen</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</p> 
+                <p>Recently I’ve stumbled upon a nasty error thrown by <em>karma</em>, that was raising in the middle of bundle compilation of our package. To make things worse, code compilation worked fine when launching the project in a browser. Only the compilation for testing was broken.</p>
+<p>The error said that there was an <em>Invalid Left-Hand Side in arrow function parameters</em> somewhere in our code. It provided a stack trace and a position in form of <code>FileName.ts:123</code> which it fine, right?</p>
+<p>Unfortunately, the line indicated by the error was something like this:</p>
+<p><code>await this.doSomeUpdates();</code></p>
+<p>which doesn’t really look like an arrow function ;).</p>
+<h2 id="The-problem"><a href="#The-problem" class="headerlink" title="The problem"></a>The problem</h2><p>Our codebase is written almost exclusively in <em>TypeScript</em>, so in order to launch unit tests in <em>Chrome</em>, we need to transpile it into <em>JavaScript</em>. The code is compiled and bundled using <em>Webpack</em>, <strong>stored in memory</strong> and launched by <em>karma</em> in a headless browser instance.</p>
+<p>It was clear, that the line indicated by the error, was pointing to a compiled file stored in memory, rather than to a <em>TypeScript</em> source file. I saw two possibilies to cope with this problem:</p>
+<ol>
+<li>Review the <em>Webpack</em> and/or <em>karma</em> configuration files, spend infinite amount of hours googling and troubleshooting, hoping that some fix will magically make the error point to a correct line, or…</li>
+<li>Debug <em>karma</em> launching our tests, chase down the error and find the source file in memory that causes problems.</li>
+</ol>
+<h2 id="The-solution"><a href="#The-solution" class="headerlink" title="The solution"></a>The solution</h2><p>Since <em>NPM</em> tasks are simply JavaScript files, it is possible to run them within the <em>Visual Studio Code</em> debugger. This way we can debug the internals of libraries and track any ambiguous errors, uncaught exceptions and other surprises.</p>
+<p>All of your locally installed packages are located in the<br><code>node_modules</code> directory. However, it has a special folder named <code>.bin</code> which typically contains executables of the downloaded modules. So nothing stops us from pointing to them within the <em>VSCode</em>‘s <code>launch.json</code> file.</p>
+<p>Let’s say that we have a following task defined in a <code>package.json</code>:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "scripts": &#123;</span><br><span class="line">    "start": "webpack --config config/webpack.config.js"</span><br><span class="line">  &#125;,</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>It’s equivalent in <code>.vscode/launch.json</code> would be:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"0.2.0"</span>,</span><br><span class="line">    <span class="attr">"configurations"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"type"</span>: <span class="string">"node"</span>,</span><br><span class="line">            <span class="attr">"request"</span>: <span class="string">"launch"</span>,</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"Debug Webpack"</span>,</span><br><span class="line">            <span class="attr">"program"</span>: <span class="string">"$&#123;workspaceFolder&#125;/node_modules/.bin/cli.js"</span>,</span><br><span class="line">            <span class="attr">"args"</span>: [</span><br><span class="line">                <span class="string">"--config"</span>,</span><br><span class="line">                <span class="string">"config/webpack.config.js"</span></span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>After saving the <code>launch.json</code> file, we can select <em>Debug Webpack</em> from <em>Configuration selector</em>, run the script with <code>F5</code> and… that’s it!</p>
+<img src="/2018/12/15/Debugging-NPM-tasks-in-Visual-Studio-Code/debugger.png" class="center" title="Hitting a breakpoint within the Webpack" alt="s configuration file">
+<p>Happy debugging! 🐞</p>
+<p class="unsplash-credit">Photo by <a href="https://unsplash.com/photos/5fNmWej4tAA" target="_blank">Helloquence</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</p>
 
                 <!-- Tags and categories -->
                 
@@ -242,7 +236,7 @@
                             Tags: 
 
 
-<a href="/tags/Node-js/">#Node.js</a> <a href="/tags/JavaScript/">#JavaScript</a>
+<a href="/tags/Visual-Studio-Code/">#Visual Studio Code</a> <a href="/tags/Debugging/">#Debugging</a> <a href="/tags/NPM/">#NPM</a>
 
 
                         

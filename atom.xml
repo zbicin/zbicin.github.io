@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zbic.in/"/>
-  <updated>2018-12-08T09:03:07.332Z</updated>
+  <updated>2018-12-15T18:14:21.068Z</updated>
   <id>https://zbic.in/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Debugging NPM tasks in Visual Studio Code</title>
+    <link href="https://zbic.in/2018/12/15/Debugging-NPM-tasks-in-Visual-Studio-Code/"/>
+    <id>https://zbic.in/2018/12/15/Debugging-NPM-tasks-in-Visual-Studio-Code/</id>
+    <published>2018-12-15T17:48:14.000Z</published>
+    <updated>2018-12-15T18:14:21.068Z</updated>
+    
+    <summary type="html">
+    
+      How to chase down ambiguous compilation errors.
+    
+    </summary>
+    
+    
+      <category term="Visual Studio Code" scheme="https://zbic.in/tags/Visual-Studio-Code/"/>
+    
+      <category term="Debugging" scheme="https://zbic.in/tags/Debugging/"/>
+    
+      <category term="NPM" scheme="https://zbic.in/tags/NPM/"/>
+    
+  </entry>
   
   <entry>
     <title>Reactor pattern, libuv and Node.js</title>
@@ -137,7 +159,7 @@
     <link href="https://zbic.in/2017/10/08/Debugging-Cordova-applications/"/>
     <id>https://zbic.in/2017/10/08/Debugging-Cordova-applications/</id>
     <published>2017-10-08T17:14:11.000Z</published>
-    <updated>2017-11-10T16:49:22.117Z</updated>
+    <updated>2018-12-15T17:11:55.482Z</updated>
     
     <summary type="html">
     
@@ -151,6 +173,8 @@
       <category term="Adobe PhoneGap" scheme="https://zbic.in/tags/Adobe-PhoneGap/"/>
     
       <category term="Android" scheme="https://zbic.in/tags/Android/"/>
+    
+      <category term="Debugging" scheme="https://zbic.in/tags/Debugging/"/>
     
   </entry>
   
@@ -424,27 +448,6 @@
       <category term="AngularJS" scheme="https://zbic.in/tags/AngularJS/"/>
     
       <category term="JavaScript" scheme="https://zbic.in/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Long variable names and their benefits during debugging</title>
-    <link href="https://zbic.in/2015/07/11/Long-variable-names-and-their-benefits-during-debugging/"/>
-    <id>https://zbic.in/2015/07/11/Long-variable-names-and-their-benefits-during-debugging/</id>
-    <published>2015-07-11T00:00:00.000Z</published>
-    <updated>2017-10-09T16:59:35.631Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Generally I tended to make jokes on Java and its long class, methods and variable names. The fact that there is a question on StackOverfl
-      
-    
-    </summary>
-    
-    
-      <category term="Other" scheme="https://zbic.in/tags/Other/"/>
     
   </entry>
   
