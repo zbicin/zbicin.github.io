@@ -11,7 +11,7 @@ cover_color: 323034
 description: How to chase down ambiguous compilation errors.
 ---
 
-Recently I've stumbled upon a nasty error thrown by _karma_, that was raising in the middle of bundle compilation of our package. To make things worse, code compilation worked fine when launching the project in a browser. Only the compilation for testing was broken.
+Recently I've stumbled upon a nasty error thrown by _karma_, that was raising in the middle of bundle compilation of our package. To make things worse, code compilation worked fine when launching the project in a browser. It was crashed only while preparing a bundle in order to perform unit tests. 
 
 The error said that there was an _Invalid Left-Hand Side in arrow function parameters_ somewhere in our code. It provided a stack trace and a position in form of `FileName.ts:123` which it fine, right?
 
@@ -20,6 +20,8 @@ Unfortunately, the line indicated by the error was something like this:
 `await this.doSomeUpdates();`
 
 which doesn't really look like an arrow function ;).
+
+{% gfycat OffbeatIdealEmperorShrimp fixed 324 256 %}
 
 ## The problem
 
@@ -35,9 +37,9 @@ It was clear, that the line indicated by the error, was pointing to a compiled f
 Since _NPM_ tasks are simply JavaScript files, it is possible to run them within the _Visual Studio Code_ debugger. This way we can debug the internals of libraries and track any ambiguous errors, uncaught exceptions and other surprises.
 
 All of your locally installed packages are located in the 
-`node_modules` directory. However, it has a special folder named `.bin` which typically contains executables of the downloaded modules. So nothing stops us from pointing to them within the _VSCode_'s `launch.json` file.
+`node_modules` directory. It has a special folder named `.bin` which typically contains scripts that act as "executables" of the downloaded modules. So nothing stops us from pointing to them within the _VSCode_'s `launch.json` file.
 
-Let's say that we have a following task defined in a `package.json`:
+Let's say that we'd like to debug a _Webpack_ config file. Considering a following task being defined in a `package.json`:
 
 ```json
 {
@@ -49,7 +51,7 @@ Let's say that we have a following task defined in a `package.json`:
 }
 ```
 
-Its equivalent in `.vscode/launch.json` would be:
+its equivalent in `.vscode/launch.json` would be:
 
 ```json
 {
