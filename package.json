@@ -6,7 +6,7 @@
     "start": "concurrently -p name -n serve,generate \"hexo serve\" \"hexo generate -w\""
   },
   "hexo": {
-    "version": "3.7.1"
+    "version": "3.9.0"
   },
   "dependencies": {
     "concurrently": "^3.5.1",
