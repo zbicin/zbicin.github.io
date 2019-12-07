@@ -14,6 +14,8 @@ Some time ago I stumbled upon several repositories containing sets of aliased co
 
 As a result, I've established a set of my own aliases that I use on a daily basis. I'm happy to share them with you in this post and hopefully you'll find something useful for your working style.
 
+<script id="asciicast-xEajV8cx5tTOSZjbgDyWxhGA8" data-autoplay="1" data-rows="10" data-loop="1" src="https://asciinema.org/a/xEajV8cx5tTOSZjbgDyWxhGA8.js" async></script>
+
 ## `.gitconfig` or `.bashrc`?
 
 Technically, there are several ways to do that. For example, we can use a dedicated [`git alias`](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases) command to set it up or simply put some `alias` statements in the `.bashrc` file. The first approach allows us to create aliases such as `git ch` (=`git checkout`), however the `git` part of the command is always required. We can do better than that. ;)
