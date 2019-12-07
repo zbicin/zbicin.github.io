@@ -5,7 +5,7 @@ description: A set of aliases that I genuinely use on everyday basis
 date: 2019-12-06
 tags: Git
 cover: cover-50.jpg
-cover_color: f5e9da
+cover_color: a87c3a
 backdrop_opacity: 0.7
 ---
 
