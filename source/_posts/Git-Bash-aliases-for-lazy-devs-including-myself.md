@@ -1,7 +1,7 @@
 ---
 title: Git/Bash aliases for lazy devs (including myself)
-subtitle: A set of aliases that I genuinely use on everyday basis
-description: A set of aliases that I genuinely use on everyday basis
+subtitle: A set of aliases that I genuinely use on everyday basis.
+description: A set of aliases that I genuinely use on everyday basis.
 date: 2019-12-06
 tags: Git
 cover: cover-50.jpg
