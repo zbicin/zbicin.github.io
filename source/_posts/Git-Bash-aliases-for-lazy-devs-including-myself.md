@@ -4,6 +4,7 @@ subtitle: A set of aliases that I genuinely use on everyday basis
 description: A set of aliases that I genuinely use on everyday basis
 date: 2019-12-06
 tags: Git
+cover: cover-50.jpg
 cover_color: f5e9da
 backdrop_opacity: 0.7
 ---
@@ -19,35 +20,10 @@ Technically, there are several ways to do that. For example, we can use a dedica
 
  Using bash aliases in `.bashrc` gives us more flexibility. We can skip the `git` part entirely and make commands even shorter, e.g. `gch` instead of `git checkout`.
 
-## My aliases in .bashrc
+## My aliases in `.bashrc`
 
 Below you can see a set of aliases that I established during a few months and genuinely use everyday. Just copy paste them into your `~/.bashrc` file and restart the terminal. Feel free to share your own aliases in the comments!
 
-```sh
-# Git Push/Pull
-alias gps='gpush';
-__git_complete gps _git_push_
-alias gpl='gpull';
-__git_complete gpl _git_pull
+<script src="https://gist.github.com/zbicin/69d9a70b22207e55b296efd9a7da7a53.js"></script>
 
-# Git Fetch/Checkout
-alias gf='git fetch';
-__git_complete gf _git_fetch
-alias gch='git checkout';
-__git_complete gch _git_checkout
-alias gfch='gf && gch';
-__git_complete gfch _git_checkout
-function gchp { git checkout $1; git pull; };
-__git_complete gchp _git_checkout
-function gchpch { git checkout $1; git pull; git checkout -; };
-__git_complete gchpch _git_checkout
-
-# Git Stash
-alias gstash='git stash save';
-alias gpop='git stash pop';
-
-# Other Git aliases
-alias gbfind='git branch --list -a | grep';
-alias gshitiforgotthisone='git commit --amend --no-edit';
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
-```
+{% unsplash p eMzblc6JmXM "Kari Shea" %}
