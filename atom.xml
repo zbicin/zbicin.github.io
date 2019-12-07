@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zbic.in/"/>
-  <updated>2018-12-16T21:48:04.407Z</updated>
+  <updated>2019-12-07T21:43:42.318Z</updated>
   <id>https://zbic.in/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git/Bash aliases for lazy devs (including myself)</title>
+    <link href="https://zbic.in/2019/12/06/Git-Bash-aliases-for-lazy-devs-including-myself/"/>
+    <id>https://zbic.in/2019/12/06/Git-Bash-aliases-for-lazy-devs-including-myself/</id>
+    <published>2019-12-06T00:00:00.000Z</published>
+    <updated>2019-12-07T21:43:42.318Z</updated>
+    
+    <summary type="html">
+    
+      A set of aliases that I genuinely use on everyday basis.
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="https://zbic.in/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>Debugging NPM tasks in Visual Studio Code</title>
@@ -425,29 +443,6 @@
       <category term="AngularJS" scheme="https://zbic.in/tags/AngularJS/"/>
     
       <category term="Bootstrap" scheme="https://zbic.in/tags/Bootstrap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OOP in AngularJS within minutes - #1 Defining a class</title>
-    <link href="https://zbic.in/2015/08/01/OOP-in-AngularJS-within-minutes-1-Defining-a-class/"/>
-    <id>https://zbic.in/2015/08/01/OOP-in-AngularJS-within-minutes-1-Defining-a-class/</id>
-    <published>2015-08-01T00:00:00.000Z</published>
-    <updated>2017-10-09T16:59:35.631Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;When it comes to object oriented programming, JavaScript is a little bit weird in comparison with other (preferably C-like) languages. Th
-      
-    
-    </summary>
-    
-    
-      <category term="AngularJS" scheme="https://zbic.in/tags/AngularJS/"/>
-    
-      <category term="JavaScript" scheme="https://zbic.in/tags/JavaScript/"/>
     
   </entry>
   
